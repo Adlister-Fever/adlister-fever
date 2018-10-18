@@ -20,3 +20,22 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+INSERT INTO ads (user_id, title, description) VALUES
+(1,'New Sandals', 'STEVE MADDEN SIZE 6 BLACK SANDAL'),
+(1,'BABY STROLLER','baby trend tandem sit-in-stand double stroller'),
+(4, 'Stove for sale', 'Stove electric appliance'),
+(5, 'Queen size mattress', 'QUEEN SIZE MATTRESS AND BOX SPRING'),
+(4, 'CAR FOR SALE', '2014 ford escape titanium-SUV'),
+(5, 'CAR FOR SALE', '2017 Ford crown victoria lx sport'),
+(9, ' CAR FOR SALE','2015 DODGE DART SXT');
+
+
+-- +----------+             +-------------+
+-- |  users   |             |    ads      |
+-- +----------+             +-------------+
+-- | id       |<------,     | id          |
+-- | username |       `-----| user_id     | <-- foreign key to users table
+-- | email    |             | title       |
+-- | password |             | description |
+-- +----------+             +-------------+
