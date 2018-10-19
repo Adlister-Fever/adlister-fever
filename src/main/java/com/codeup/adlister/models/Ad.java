@@ -5,10 +5,10 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
-    private int value;
+    private long value;
     private String image;
 
-    public Ad(long id, long userId, String title, String description, int value, String image) {
+    public Ad(long id, long userId, String title, String description, long value, String image) {
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -63,11 +63,11 @@ public class Ad {
         this.description = description;
     }
 
-    public int getValue() {
+    public long getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(long value) {
         this.value = value;
     }
 

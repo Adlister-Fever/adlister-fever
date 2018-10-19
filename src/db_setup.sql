@@ -3,7 +3,7 @@ use adlister_db;
 drop table users if exists;
 
 create table users (
-user_id int(10) unsigned not null auto_increment,
+user_id int (10) unsigned not null auto_increment,
 username varchar(50) not null,
 email varchar(50) not null,
 password varchar(255) not null,
@@ -14,11 +14,11 @@ primary key (user_id)
 drop table ads if exists;
 
 create table ads (
-  ad_id int (10) unsigned not null auto_increment,
+  ad_id int(10) unsigned not null auto_increment,
   user_id int(10) unsigned not null,
   title varchar(50) not null,
   description varchar (50) not null,
-  value int (10),
+  value int(10),
   image varchar(255),
   primary key (ad_id, user_id),
   key user_id (user_id),
