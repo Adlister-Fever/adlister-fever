@@ -31,12 +31,13 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        System.out.println(user.getPassword());
         //i can't get the passwords to match
         System.out.println(Password.check(user.getPassword(),Password.hash(password)));
         System.out.println(user.getPassword());
         System.out.println(Password.hash(password));
         System.out.println(password);
-        if (user.getPassword().equals(Password.hash(password))) {
+        if (Password.check(password, user.getPassword())) {
             request.getSession().setAttribute("user", username);
             response.sendRedirect("/profile");
         } else {

@@ -13,7 +13,7 @@ public class User {
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
-        this.setPassword(password);
+        this.password = password;
     }
 
     public User(long id, String username, String email, String password) {
@@ -51,5 +51,6 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) { this.password = Password.hash(password); }
+    public void setPassword(String password) { this.password = password;
+    }
 }

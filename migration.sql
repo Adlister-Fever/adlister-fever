@@ -21,6 +21,21 @@ CREATE TABLE ads (
         ON DELETE CASCADE
 );
 
+CREATE TABLE categories(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE post_categories(
+  post_id INT UNSIGNED DEFAULT NULL,
+  categories_id INT UNSIGNED DEFAULT NULL,
+  FOREIGN KEY (ads_id)
+  REFERENCES ads(id),
+  FOREIGN KEY (post_id)
+  REFERENCES categories(id)
+);
+
 INSERT INTO ads (user_id, title, description) VALUES
 (1,'New Sandals', 'STEVE MADDEN SIZE 6 BLACK SANDAL'),
 (1,'BABY STROLLER','baby trend tandem sit-in-stand double stroller'),
@@ -28,8 +43,30 @@ INSERT INTO ads (user_id, title, description) VALUES
 (5, 'Queen size mattress', 'QUEEN SIZE MATTRESS AND BOX SPRING'),
 (4, 'CAR FOR SALE', '2014 ford escape titanium-SUV'),
 (5, 'CAR FOR SALE', '2017 Ford crown victoria lx sport'),
-(9, ' CAR FOR SALE','2015 DODGE DART SXT');
+(9, 'CAR FOR SALE','2015 DODGE DART SXT');
 
+INSERT INTO categories(name) VALUES
+('community'),
+('services'),
+('discussion forums'),
+('housing'),
+('for sale'),
+('jobs'),
+('gigs');
+
+INSERT INTO ads_categories (ads_id, categories_id) VALUES
+(1, 2),
+(1, 3),
+(2, 5),
+(2, 4),
+(2, 3),
+(3, 1),
+(4, 6),
+(5, 3),
+(6, 2),
+(7, 5),
+(7, 4),
+(7, 7);
 
 -- +----------+             +-------------+
 -- |  users   |             |    ads      |
