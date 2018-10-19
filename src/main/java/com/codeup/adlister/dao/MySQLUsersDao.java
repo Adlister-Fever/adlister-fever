@@ -1,9 +1,8 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.models.Config;
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 import com.mysql.cj.jdbc.Driver;
-import org.mindrot.jbcrypt.BCrypt;
 
 import java.sql.*;
 
@@ -23,7 +22,6 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-
     @Override
     public User findByUsername(String username) {
         String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
@@ -41,7 +39,7 @@ public class MySQLUsersDao implements Users {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
         try {
             String userPass = user.getPassword();
-            String hashPass = BCrypt.hashpw(userPass, BCrypt.gensalt());
+            String hashPass = Password.hash(userPass);
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, user.getUsername());
             stmt.setString(2, user.getEmail());
@@ -60,7 +58,7 @@ public class MySQLUsersDao implements Users {
             return null;
         }
         return new User(
-            rs.getLong("user_id"),
+            rs.getLong("id"),
             rs.getString("username"),
             rs.getString("email"),
             rs.getString("password")

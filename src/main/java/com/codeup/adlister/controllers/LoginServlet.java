@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
@@ -30,11 +31,13 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-
-        boolean validAttempt = BCrypt.checkpw(password, user.getPassword());
-
-        if (validAttempt) {
-            request.getSession().setAttribute("user", user);
+        //i can't get the passwords to match
+        System.out.println(Password.check(user.getPassword(),Password.hash(password)));
+        System.out.println(user.getPassword());
+        System.out.println(Password.hash(password));
+        System.out.println(password);
+        if (user.getPassword().equals(Password.hash(password))) {
+            request.getSession().setAttribute("user", username);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
