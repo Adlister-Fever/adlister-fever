@@ -4,8 +4,7 @@ import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MySQLAdsDao implements Ads {
     private Connection connection;
@@ -59,9 +58,9 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
-            rs.getString("description"),
-            rs.getLong("value"),
-            rs.getString("image")
+            rs.getString("image"),
+            rs.getLong("price"),
+            rs.getString("description")
         );
     }
 
@@ -72,4 +71,5 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
 }
