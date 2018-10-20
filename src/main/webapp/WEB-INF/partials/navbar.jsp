@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse sm-justify-content-center" id="navbarNavAltMarkup">
-            <a href="/homepage"><img src="Adlister%20Logo.png" id="logo"></a>
+            <a href="/"><img src="Adlister-Logo.png" id="logo"></a>
             <div class="navbar-nav">
                 <c:if test="${user != null}">
                     <a href="/ads/create">
