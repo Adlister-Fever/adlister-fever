@@ -9,9 +9,21 @@
 <footer>
 
 </footer>
-<%--<link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">--%>
-</div>
-<%--THIS IS FLUID CONTAINER CLOSURE FOR DOCUMENT.  DO NOT REMOVE DIV CLOSURE FROM FILE--%>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<%--THIS IS CUSTOM JAVASCRIPT SECTION--%>
+<script>
+    var inputArray = [];
+    $("confirm_Password").keyup(function(event){
+        inputArray.push(event.keyCode);
+        if (inputArray.toString().includes("38,38,40,40,37,39,37,39,66,65,13")) {
+            colorFlash();
+            imageParty();
+            imageDance();
+        }
+    });
+
+</script>
 
 
