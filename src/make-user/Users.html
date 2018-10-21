@@ -8,13 +8,9 @@
 <div class="container" id="main">
 
 </div>
-
 <img src="" alt="">
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-
-
     (function(){
         function open(obj){
             for(let key in obj){
@@ -22,22 +18,14 @@
                 console.log(key + ": " + obj[key]);
             }
         }
-
         let pullUser = ()=>($.ajax({
             url: 'https://randomuser.me/api/',
             dataType: 'json',
             success: function(data) {
-                // console.log(data);
-                // console.log(data.results);
-                // console.log(data.results[0].gender);
-                // console.log(data.results[0].picture.thumbnail);
                 let myJSON = JSON.stringify(data);
                 document.getElementById("main").innerHTML = myJSON;
-
-                // console.log(data.results[0].picture.large);
                 let src = `src="${data.results[0].picture.large}"`;
                 $(`<div><img ${src} alt="profile image"><div class="display-4">${data.results[0].name.first} ${data.results[0].name.last}</div></div>`).appendTo('#main');
-
                 open(data.results[0]);
                 open(data.results[0].name);
                 open(data.results[0].location);
@@ -51,14 +39,12 @@
                     if(err) {
                         return console.log(err);
                     }
-
                     console.log("The file was saved!");
                 });
             }
         }));
         pullUser();
     })();
-
 </script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
