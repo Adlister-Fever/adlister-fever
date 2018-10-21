@@ -120,5 +120,6 @@ INSERT INTO ads (user_id, title, image, price, description) VALUES
     (3, 'Lime chair','<img src="https://vignette.wikia.nocookie.net/animalcrossing/images/1/18/Limechaircf.png/revision/latest/scale-to-width-down/50?cb=20160711201842" alt="Limechaircf" class="" data-image-key="Limechaircf.png" data-image-name="Limechaircf.png" width="50" height="50" >','325','Chair'),
     (2, 'Orange chair','<img src="https://vignette.wikia.nocookie.net/animalcrossing/images/1/1a/Orangechaircf.png/revision/latest/scale-to-width-down/50?cb=20160711202429" alt="Orangechaircf" class="" data-image-key="Orangechaircf.png" data-image-name="Orangechaircf.png" width="50" height="50" >','325','Table');
 
+
 -- 44 ads
 
