@@ -6,12 +6,10 @@
     </jsp:include>
     <style>
         #passwordConfirmInvalid {
-            color: red;
             display: none;
         }
 
         #passwordConfirmValid {
-            color: greenyellow;
             display: none;
         }
     </style>
