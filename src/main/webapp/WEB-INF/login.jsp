@@ -6,6 +6,7 @@
     </jsp:include>
 </head>
 <body>
+<div class="container-fluid">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
@@ -18,8 +19,9 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <input type="submit" class="btn btn-success btn-block" value="Log In">
         </form>
     </div>
+</div>
 </body>
 </html>
