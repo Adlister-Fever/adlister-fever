@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse sm-justify-content-center" id="navbarNavAltMarkup">
-            <a href="/homepage"><img src="Adlister%20Logo.png" id="logo"></a>
+            <a href="/"><img src="Adlister-Logo.png" id="logo"></a>
             <div class="navbar-nav">
                 <c:if test="${user != null}">
                     <a href="/ads/create">
@@ -18,6 +18,12 @@
                     </a>
                     <a href="/profile">
                         <button type="button" class=" btn btn-outline-light">Profile</button>
+                    </a>
+                    <a href="/logout">
+                        <!-- Button trigger modal profile edit-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="editProfile">
+                            Edit Profile
+                        </button>
                     </a>
                     <a href="/logout">
                         <button type="button" class=" btn btn-outline-light">Logout</button>
