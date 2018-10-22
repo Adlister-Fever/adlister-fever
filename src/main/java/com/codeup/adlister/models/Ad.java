@@ -4,17 +4,17 @@ public class Ad {
     private long id;
     private long userId;
     private String title;
-    private String description;
-    private long value;
     private String image;
+    private long value;
+    private String description;
 
     public Ad(long id, long userId, String title, String description, long value, String image) {
         this.id = id;
         this.userId = userId;
         this.title = title;
-        this.description = description;
-        this.value = value;
         this.image = image;
+        this.value = value;
+        this.description = description;
     }
 
     public Ad(long userId, String title, String description) {

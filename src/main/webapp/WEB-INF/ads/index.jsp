@@ -13,6 +13,7 @@
     <h1>Here are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">
+
         <div class="card float-left col-md-4 text-center${ad.id}">
             <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>
             <p>Price:$ ${ad.value}</p>
