@@ -66,7 +66,7 @@ public class MySQLUsersDao implements Users {
                 rs.getString("email"),
                 rs.getString("password"),
                 rs.getString("gender"),
-                rs.getString("name_title"),
+                rs.getString("first_name"),
                 rs.getString("street"),
                 rs.getString("state"),
                 rs.getString("zip_code"),
