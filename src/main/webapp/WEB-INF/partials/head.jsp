@@ -20,7 +20,4 @@
         height: auto;
 
     }
-    .userad{
-        opacity: .5;
-    }
 </style>
