@@ -16,7 +16,7 @@
 
     }
     #mainlogo{
-        width: 200px;
+        width: 250px;
         height: auto;
 
     }
