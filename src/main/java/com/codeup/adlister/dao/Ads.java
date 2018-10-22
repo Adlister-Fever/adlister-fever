@@ -9,6 +9,8 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+
+    List<Ad> userAll(long id);
     //find by id
     Ad findByTitle(String title);
 

@@ -11,12 +11,12 @@ public class Config {
 
 
     public String getUser() {
-        return "adlister_admin";
+        return "user1";
     }
 
 
     public String getPassword() {
-        return "sqlpass";
+        return "111";
     }
 
 

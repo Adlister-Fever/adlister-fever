@@ -10,7 +10,7 @@
 //
 //    public List<Ad> all() {
 //        if (ads == null) {
-//            ads = generateAds();
+//            ads = MySQLAdsDao;
 //        }
 //        return ads;
 //    }
