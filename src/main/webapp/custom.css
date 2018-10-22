@@ -1,8 +1,8 @@
-body{
-    background-image: url("../../Adlister_bg.jpg");
-
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
+#background{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
 }
 #logo {
     width: 70px;
@@ -10,6 +10,7 @@ body{
 }
 .lister{
     font-family: 'Dancing Script', cursive;
+    color: white;
 
 }
 #mainlogo{

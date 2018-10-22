@@ -1,3 +1,5 @@
+ads view.jsp
+
 <%--
   Created by IntelliJ IDEA.
   User: svelazquez
@@ -20,12 +22,12 @@
     <h1>Here is the ad.</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
-        <%--<div class="col-md-6 ${ad.id}">--%>
-            <%--<h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>--%>
-            <%--<p>Price: ${param.value}</p>--%>
-            <%--<p>Furniture Type: ${sessionScope.id}</p>--%>
-            <%--<p>${ad.description}</p>--%>
-        <%--</div>--%>
+    <%--<div class="col-md-6 ${ad.id}">--%>
+    <%--<h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>--%>
+    <%--<p>Price: ${param.value}</p>--%>
+    <%--<p>Furniture Type: ${sessionScope.id}</p>--%>
+    <%--<p>${ad.description}</p>--%>
+    <%--</div>--%>
     <%--</c:forEach>--%>
     <p>AD title: ${sessionScope.ad}</p>
     <p>AD ID: ${param.id}</p>
@@ -33,7 +35,7 @@
     ${param.image}
     <c:forEach var="ad" items="${ads}">
         ${ad.title}
-    ${ad.image}
+        ${ad.image}
         ${ad.value}
 
     </c:forEach>
