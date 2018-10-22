@@ -122,4 +122,27 @@ INSERT INTO ads (user_id, title, image, price, description) VALUES
 
 
 -- 44 ads
+ALTER TABLE users DROP name_title;
+ALTER TABLE users DROP latitude;
+ALTER TABLE users DROP longitude;
+ALTER TABLE users DROP timezone_offset;
+ALTER TABLE users DROP timezone_description;
+ALTER TABLE users DROP uuid;
+ALTER TABLE users DROP login_salt;
+ALTER TABLE users DROP login_md5;
+ALTER TABLE users DROP login_sha1;
+ALTER TABLE users DROP login_sha256;
+ALTER TABLE users DROP dob_age;
+ALTER TABLE users DROP id_name;
+ALTER TABLE users DROP id_value;
+ALTER TABLE users DROP nat;
+ALTER TABLE users DROP info_seed;
+ALTER TABLE users DROP info_results;
+ALTER TABLE users DROP info_page;
+ALTER TABLE users DROP info_version;
+ALTER TABLE users DROP picture_medium;
+ALTER TABLE users DROP picture_thumbnail;
+
+
+
 
