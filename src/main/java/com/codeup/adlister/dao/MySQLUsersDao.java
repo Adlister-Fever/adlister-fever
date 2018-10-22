@@ -37,7 +37,7 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public Long insert(User user) {
-        String query = "INSERT INTO users(username, email, password, image) VALUES (?, ?, ? ?)";
+        String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
         try {
             String defaultImage = "https://aff5fa4925746bf9c161-fb36f18ca122a30f6899af8eef8fa39b.ssl.cf5.rackcdn.com/images/AC_Tom_FRYtwIN.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png";
             String userPass = user.getPassword();
@@ -46,7 +46,7 @@ public class MySQLUsersDao implements Users {
             stmt.setString(1, user.getUsername());
             stmt.setString(2, user.getEmail());
             stmt.setString(3, hashPass);
-            stmt.setString(4, defaultImage);
+//            stmt.setString(4, defaultImage);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
