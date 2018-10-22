@@ -19,3 +19,7 @@
     height: auto;
 
 }
+.navbar{
+    background-color: rgba(107,161,129,1);
+    !important;
+}

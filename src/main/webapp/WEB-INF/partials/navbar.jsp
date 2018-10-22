@@ -6,13 +6,15 @@
     <img src="../../Adlister_bg.jpg" id="background">
 </div>
 
-<nav class="navbar navbar-expand sticky-top navbar-dark bg-success">
+<nav class="navbar navbar-expand sticky-top navbar-dark"
+        style="background-color: rgba(107,161,129,.90);
+                max-height: 50px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div>
-        <a href="/"><img src="../../Adlister-Logo-White.png" id="logo"></a>
+        <a href="/"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
     </div>
     <div class="collapse navbar-collapse sm-justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
