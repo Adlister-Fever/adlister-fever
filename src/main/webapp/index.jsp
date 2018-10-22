@@ -5,12 +5,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <style>
-        body{
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
 <body>
 <div class="container-fluid">
