@@ -5,12 +5,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <style>
-        body{
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -19,7 +13,7 @@
         <div class="container">
             <h1 class="display-2 lister">Welcome to</h1>
             <div class="">
-                <img src="Adlister-Logo.png" alt="logo" id="mainlogo" class="">
+                <img src="Adlister-Logo-White.png" alt="logo" id="mainlogo" class="">
             </div>
             <p class="lead">
                 <%--This is a modified jumbotron that occupies the entire horizontal space of its parent.--%>

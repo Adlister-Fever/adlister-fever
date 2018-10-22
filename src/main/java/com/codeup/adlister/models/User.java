@@ -19,6 +19,7 @@ public class User {
     private String picture_large;
     private String registered_date;
     private String registered_age;
+    private String last_name;
 
     public User() {}
 
@@ -26,16 +27,16 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
-        
+
     }
 
-
-    public User(long id, String username, String email, String password, String gender, String dob_date, String street, String city, String state, String zip_code, String phone, String cell, String picture_large, String registered_date, String registered_age) {
+    public User(long id, String username, String email, String password, String gender, String last_name, String dob_date, String street, String state, String city, String zip_code, String phone, String cell, String picture_large, String registered_date, String registered_age) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
         this.gender = gender;
+        this.last_name = last_name;
         this.dob_date = dob_date;
         this.street = street;
         this.city = city;
@@ -47,6 +48,14 @@ public class User {
         this.registered_date = registered_date;
         this.registered_age = registered_age;
 
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public long getId() {
@@ -149,6 +158,7 @@ public class User {
     }
 
     public void setPhone(String phone) {
+        System.out.println(this.phone);
         this.phone = phone;
     }
 
@@ -161,6 +171,7 @@ public class User {
     }
 
     public String getPicture_large() {
+        System.out.println(this.picture_large);
         return picture_large;
     }
 
