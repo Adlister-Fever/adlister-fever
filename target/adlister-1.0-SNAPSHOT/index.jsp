@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-<div class="container-fluid">
+
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="jumbotron jumbotron-fluid bg-transparent text-center">
         <div class="container">
@@ -46,6 +46,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-</div>
+
 </body>
 </html>
