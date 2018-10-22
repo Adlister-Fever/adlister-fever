@@ -17,23 +17,28 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <%--<h1>Here Are all the ads!</h1>--%>
+    <h1>Here is the ad.</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
         <%--<div class="col-md-6 ${ad.id}">--%>
             <%--<h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>--%>
-            <%--<p>Price: ${ad.value}</p>--%>
-            <%--<p>Furniture Type: ${ad.image}</p>--%>
+            <%--<p>Price: ${param.value}</p>--%>
+            <%--<p>Furniture Type: ${sessionScope.id}</p>--%>
             <%--<p>${ad.description}</p>--%>
         <%--</div>--%>
     <%--</c:forEach>--%>
+    <p>AD title: ${sessionScope.ad}</p>
+    <p>AD ID: ${param.id}</p>
+    <p>${param.title}</p>
+    ${param.image}
+    <c:forEach var="ad" items="${ads}">
+        ${ad.title}
+    ${ad.image}
+        ${ad.value}
 
-        <div class="col-md-6 ${ad.id}">
-        <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>
-        <p>Price: ${ad.value}</p>
-        <p>Furniture Type: ${ad.image}</p>
-        <p>${ad.description}</p>
-        </div>
+    </c:forEach>
+
+
 
 </div>
 
