@@ -18,6 +18,16 @@ public class AdsIndexServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        long id = request.getParameter("id");
-        Ad ad = DaoFactory.getAdsDao().findByID(id);
+        String title = request.getParameter("title");
+
+        Ad ad = DaoFactory.getAdsDao().findByTitle(title);
+
+
+
+        request.getSession().setAttribute("title", ad.getTitle());
+        request.getSession().setAttribute("image", ad.getImage());
+
+
+        response.sendRedirect("/ads/view");
     }
+}

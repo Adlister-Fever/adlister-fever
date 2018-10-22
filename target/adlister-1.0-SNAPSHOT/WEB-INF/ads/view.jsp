@@ -27,13 +27,15 @@
             <%--<p>${ad.description}</p>--%>
         <%--</div>--%>
     <%--</c:forEach>--%>
-    <p>AD: ${param.ad}</p>
+    <p>AD title: ${sessionScope.ad}</p>
     <p>AD ID: ${param.id}</p>
     <p>${param.title}</p>
     ${param.image}
     <c:forEach var="ad" items="${ads}">
-        ${ad.image}
-    ${ad.id}
+        ${ad.title}
+    ${ad.image}
+        ${ad.value}
+
     </c:forEach>
 
 

@@ -10,6 +10,6 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     //find by id
-    Ad findByID(long id);
+    Ad findByTitle(String title);
 
 }
