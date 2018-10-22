@@ -15,11 +15,6 @@ public class ViewAdServlet extends HttpServlet {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/view.jsp").forward(request, response);
     }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String id = request.getParameter("id");
-        response.getWriter().println("ID is" + id);
-    }
 }
 
 

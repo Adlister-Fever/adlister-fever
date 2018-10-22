@@ -34,6 +34,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    //get ONE ad
+    @Override
+    public Ad findByID(long id) {
+        String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            return extractAd(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by id", e);
+        }
+    }
+
     @Override
     public Long insert(Ad ad) {
 //        User user = new User;
