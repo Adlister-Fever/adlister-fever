@@ -28,6 +28,7 @@ public class MySQLUsersDao implements Users {
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
+            System.out.println(username);
             return extractUser(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
@@ -64,7 +65,17 @@ public class MySQLUsersDao implements Users {
                 rs.getString("username"),
                 rs.getString("email"),
                 rs.getString("password"),
-                rs.getString("picture_thumbnail")
+                rs.getString("gender"),
+                rs.getString("first_name"),
+                rs.getString("street"),
+                rs.getString("state"),
+                rs.getString("zip_code"),
+                rs.getString("dob_date"),
+                rs.getString("registered_date"),
+                rs.getString("registered_age"),
+                rs.getString("phone"),
+                rs.getString("cell"),
+                rs.getString("picture_large")
         );
     }
 
