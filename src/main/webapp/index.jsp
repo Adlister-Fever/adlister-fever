@@ -9,10 +9,10 @@
 <body class="container">
 <div class="container-fluid">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid bg-transparent text-center">
         <div class="container">
-            <h1 class="display-2 lister">Welcome to...         </h1>
-            <div class="text-center">
+            <h1 class="display-2 lister">Welcome to</h1>
+            <div class="">
                 <img src="Adlister-Logo.png" alt="logo" id="mainlogo" class="">
             </div>
             <p class="lead">

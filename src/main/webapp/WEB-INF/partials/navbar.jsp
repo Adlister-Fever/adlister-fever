@@ -18,10 +18,7 @@
                     <a href="/profile">
                         <button type="button" class=" btn btn-outline-light">Profile</button>
                     </a>
-                    <!-- Button trigger modal profile edit-->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProfile">
-                        Edit Profile
-                    </button>
+
                     <a href="/logout">
                         <button type="button" class=" btn btn-outline-light">Logout</button>
                     </a>
