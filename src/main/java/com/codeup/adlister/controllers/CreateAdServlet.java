@@ -24,13 +24,21 @@ public class CreateAdServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String imageUrl;
+        if (request.getParameter("image").equals("")){
+            imageUrl = "<img src='https://i.pinimg.com/originals/87/e2/03/87e20377c9c37d0b07dcc10504c636a8.png' width='50' height='50'>";
+        }else{
+            imageUrl = request.getParameter("image");
+        }
+
         Ad ad = new Ad(
-                (Long) request.getSession().getAttribute("user_id"),
+                (long) request.getSession().getAttribute("id"),
                 request.getParameter("title"),
                 request.getParameter("description"),
-                request.getParameter("image")
+                Long.parseLong(request.getParameter("price")),
+                imageUrl
         );
         DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        response.sendRedirect("/ads/view?id=");
     }
 }
