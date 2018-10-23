@@ -1,12 +1,4 @@
-ads view.jsp
 
-<%--
-  Created by IntelliJ IDEA.
-  User: svelazquez
-  Date: 10/21/18
-  Time: 1:22 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -19,7 +11,7 @@ ads view.jsp
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here is the ad.</h1>
+    <h1 class="lister">Here is the ad</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
     <%--<div class="col-md-6 ${ad.id}">--%>
