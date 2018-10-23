@@ -9,11 +9,27 @@
     width: 70px;
     height: auto;
 }
+/*PROFILE STYLING*/
 .lister{
     font-family: 'Dancing Script', cursive;
     color: white;
-
+    !important;
 }
+
+h1,.title{
+    font-family: "Dancing Script", cursive;
+    color: white;
+    font-size: ;
+    !important;
+}
+#profile-pic{
+    border-radius: 25%;
+}
+
+
+
+
+
 #mainlogo{
     width: 200px;
     height: auto;
@@ -32,4 +48,6 @@
     !important;
 
 }
+
+
 
