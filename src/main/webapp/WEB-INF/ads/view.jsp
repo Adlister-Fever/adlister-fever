@@ -36,6 +36,15 @@
         </div>
     </div>
 
+    <div class="card">
+        <div class="display-4 lister">Seller:</div>
+        <div><img src="${seller_image}" alt="seller profile picture"></div>
+        <div>${username}</div>
+        <div>${home_phone}</div>
+        <div>${cell}</div>
+        <div>${email}</div>
+    </div>
+
 </div>
 
 </body>
