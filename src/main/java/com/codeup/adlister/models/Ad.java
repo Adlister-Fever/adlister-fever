@@ -23,6 +23,14 @@ public class Ad {
         this.description = description;
     }
 
+    public Ad(long id, String title, String description, long value, String image) {
+        this.userId = id;
+        this.title = title;
+        this.description = description;
+        this.value = value;
+        this.image = image;
+    }
+
     public long getId() {
 
         return id;

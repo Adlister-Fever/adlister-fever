@@ -14,8 +14,8 @@ import java.io.IOException;
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") != null) {
-            System.out.println(request.getSession().getAttribute("user")!= null);
+        if (request.getSession().getAttribute("user") == null) {
+            System.out.println(request.getSession().getAttribute("user")== null);
             response.sendRedirect("/login");
         } else {
             request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
@@ -24,13 +24,21 @@ public class CreateAdServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        User currentUser = (User) request.getSession().getAttribute("user");
+        String imageUrl;
+        if (request.getParameter("image").equals("")){
+            imageUrl = "<img src='https://i.pinimg.com/originals/87/e2/03/87e20377c9c37d0b07dcc10504c636a8.png' width='50' height='50'>";
+        }else{
+            imageUrl = request.getParameter("image");
+        }
+
         Ad ad = new Ad(
-                currentUser.getId(),
+                (long) request.getSession().getAttribute("id"),
                 request.getParameter("title"),
-                request.getParameter("description")
+                request.getParameter("description"),
+                Long.parseLong(request.getParameter("price")),
+                imageUrl
         );
         DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        response.sendRedirect("/ads/view?id=");
     }
 }

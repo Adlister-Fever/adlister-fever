@@ -47,32 +47,32 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
-
-
-    //get ONE ad
-    @Override
-    public Ad findByTitle(String title) {
-        String query = "SELECT * FROM ads WHERE title = ? LIMIT 1";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, title);
-            return extractAd(stmt.executeQuery());
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding an ad by title", e);
-        }
-    }
+//    //get ONE ad
+//    @Override
+//    public Ad findByTitle(String title) {
+//        String query = "SELECT * FROM ads WHERE title = ? LIMIT 1";
+//        try {
+//            PreparedStatement stmt = connection.prepareStatement(query);
+//            stmt.setString(1, title);
+//            ResultSet rs = stmt.executeQuery();
+//            return createAdsFromResults(rs);
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error finding an ad by title", e);
+//        }
+//    }
 
     @Override
     public Long insert(Ad ad) {
 //        User user = new User;
 //        user.setId(session.getAttribute("user_id"));
-        String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+        String insertQuery = "INSERT INTO ads(user_id, title, description, price, image) VALUES (?, ?, ?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
+            stmt.setLong(4, ad.getValue());
+            stmt.setString(5, ad.getImage());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();

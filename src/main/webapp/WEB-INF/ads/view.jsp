@@ -11,7 +11,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1 class="lister">Here is the ad</h1>
+    <h1 class="lister">Here is the ad:</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
     <%--<div class="col-md-6 ${ad.id}">--%>
@@ -21,17 +21,20 @@
     <%--<p>${ad.description}</p>--%>
     <%--</div>--%>
     <%--</c:forEach>--%>
-    <p>AD title: ${sessionScope.ad}</p>
-    <p>AD ID: ${param.id}</p>
-    <p>${param.title}</p>
-    ${param.image}
-    <c:forEach var="ad" items="${ads}">
-        ${ad.title}
-        ${ad.image}
-        ${ad.value}
-    </c:forEach>
-
-
+    <div class="card text-center bg-transparent border-0 lister font-white">
+        <div class="display-2">${param.title}</div>
+        <br>
+        <%--<p>AD ID: ${param.id}</p>--%>
+        <div>${param.image}</div>
+        <br>
+        <div class="display-4">
+            $${param.price}
+        </div>
+        <br>
+        <div class="display-4">
+            Furniture Type: ${param.desc}
+        </div>
+    </div>
 
 </div>
 
