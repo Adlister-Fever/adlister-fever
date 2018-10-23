@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
             return;
         }
         if (Password.check(password, user.getPassword())) {
+            request.getSession().setAttribute("id", user.getId());
             request.getSession().setAttribute("user", Caps.formatName(username));
             request.getSession().setAttribute("last_name", Caps.formatName(user.getLast_name()));
             request.getSession().setAttribute("profile", user.getPicture_large());
