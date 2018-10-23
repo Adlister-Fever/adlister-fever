@@ -9,29 +9,36 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="row">
-    <div class="profileBox col-sm-12 bg-success text-white border-0 pb-3 mx-4">
-        <div class="display-4 row" style="background-color: indianred">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</div>
+    <div class="profileBox col-sm-12 text-white border-0 pb-3 mx-4">
+        <div class="row"><h1 class="title display-4">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
+
         <div class="row">
             <div class="media" id="media">
                 <img class="mr-3" id="profile-pic" src="${profile}" alt="Generic placeholder image">
-                <button type="button" class="btn btn-outline-light text-white" data-toggle="modal"
-                        data-target=".bd-example-modal-lg">Edit Profile
-                </button>
-                <div class="media-body text-center">
-                    <h5 class="mt-0">${sessionScope.user}</h5>
+
+                <div class="media-body ml-4 text-left">
+                    <h4 class="mt-0">${sessionScope.user}</h4>
                     <div>
-                        <div>Email: ${email}</div>
-                        <div>Address: ${street},</div>
+                        <div><h5>Email:</h5> ${email}</div>
+                        <div><h5>Address:</h5> ${street},</div>
                         <div>${city}, ${state}, ${zip}</div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <button type="button" class="btn btn-outline-light text-white mt-2" data-toggle="modal"
+                    data-target=".bd-example-modal-lg">Edit Profile
+            </button>
+        </div>
+
+
+
     </div>
 </div>
 <!-- Large modal -->
 
-<h1 class="lister">Your ads:</h1>
+<h1 class="lister mx-4">Your ads:</h1>
 <div class="container text-center">
     <c:forEach var="ad" items="${userads}">
     <div class="adBox card float-left text-center${ad.id}">
