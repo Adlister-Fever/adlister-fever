@@ -9,11 +9,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="row">
-    <div class="profileBox card col-6 bg-transparent text-white border-0 pb-3">
-        <div class="display-4">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</div>
-        <div>
+    <div class="profileBox col-sm-12 bg-success text-white border-0 pb-3 mx-4">
+        <div class="display-4 row" style="background-color: indianred">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</div>
+        <div class="row">
             <div class="media" id="media">
-                <img class="mr-3" src="${profile}" alt="Generic placeholder image">
+                <img class="mr-3" id="profile-pic" src="${profile}" alt="Generic placeholder image">
                 <button type="button" class="btn btn-outline-light text-white" data-toggle="modal"
                         data-target=".bd-example-modal-lg">Edit Profile
                 </button>
