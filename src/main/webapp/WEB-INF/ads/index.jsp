@@ -9,6 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
+    <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
     <div class="lister display-3 p-2">Here are all the ads!</div>
     <c:forEach var="ad" items="${ads}">
         <div class="adBox card float-left col-3 text-center">
@@ -21,5 +22,6 @@
         </div>
         </c:forEach>
     </div>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>
