@@ -24,20 +24,5 @@ public class AdsIndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 
-//        List<Ad> ads = DaoFactory.getAdsDao().all();
-////        for (Ad ad: ads){
-////            if(ad.getTitle() == adtitle && ad.getId() == Long.parseLong(adid)){
-////                request.getSession().setAttribute("id", ad.getId());
-////                request.getSession().setAttribute("user_id", ad.getUserId());
-////                request.getSession().setAttribute("title", ad.getTitle());
-////                request.getSession().setAttribute("image", ad.getImage());
-////                request.getSession().setAttribute("price", ad.getValue());
-////                request.getSession().setAttribute("description", ad.getDescription());
-//            }
-//        }
-
-
-//
-
     }
 }
