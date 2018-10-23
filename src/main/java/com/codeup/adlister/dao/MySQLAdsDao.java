@@ -101,4 +101,24 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+    private List<Ad> createRandomAdsFromResults(ResultSet rs) throws SQLException {
+        List<Ad> ads = new ArrayList<>();
+        while (rs.next()) {
+            ads.add(extractAd(rs));
+        }
+        Collections.shuffle(ads);
+        return ads;
+    }
+    @Override
+    public List<Ad> randomAll() {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads");
+            ResultSet rs = stmt.executeQuery();
+            return createRandomAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
 }

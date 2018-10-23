@@ -11,6 +11,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+    <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
     <h1 class="lister">Here is the ad:</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
@@ -46,6 +47,6 @@
     </div>
 
 </div>
-
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>

@@ -8,6 +8,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<jsp:include page="/WEB-INF/partials/firePics.jsp"/>
 <div class="row">
     <div class="profileBox col-sm-12 text-white border-0 pb-3 mx-4">
         <div class="row"><h1 class="title display-4">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
