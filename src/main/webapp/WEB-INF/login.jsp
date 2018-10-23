@@ -23,5 +23,20 @@
         </form>
     </div>
 
+
+
+
+    <script>
+        var inputArray = [];
+        $("confirm_Password").keyup(function(event){
+            inputArray.push(event.keyCode);
+            if (inputArray.toString().includes("38,38,40,40,37,39,37,39,66,65,13")) {
+                colorFlash();
+                imageParty();
+                imageDance();
+            }
+        });
+
+    </script>
 </body>
 </html>
