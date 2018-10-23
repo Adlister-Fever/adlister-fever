@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-<div class="container-fluid">
+
     <jsp:include page="partials/navbar.jsp"/>
     <div class="container">
         <h1>Please fill in your information.</h1>
@@ -49,7 +49,7 @@
         </form>
     </div>
     <jsp:include page="partials/footer.jsp"/>
-</div>
+
 </body>
 <script>
 
