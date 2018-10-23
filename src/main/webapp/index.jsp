@@ -22,7 +22,15 @@
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                <c:forEach var="ad" items="${ads}">
+                <div class="card float-left col-md-4 text-center${ad.id}">
+                    <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>
+                    <p>Price:$ ${ad.value}</p>
+                    <p>Furniture Type: ${ad.image}</p>
+                    <p>${ad.description}</p>
+                </div>
+            </c:forEach></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
