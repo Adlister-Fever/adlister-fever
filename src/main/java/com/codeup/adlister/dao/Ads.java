@@ -12,6 +12,6 @@ public interface Ads {
 
     List<Ad> userAll(long id);
     //find by id
-    Ad findByTitle(String title);
+//    Ad findByTitle(String title);
 
 }
