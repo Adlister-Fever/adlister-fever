@@ -31,8 +31,8 @@
 </div>
 <!-- Large modal -->
 
-<div class="container">
-    <h1 class="lister">Your ads:</h1>
+<h1 class="lister">Your ads:</h1>
+<div class="container text-center">
     <c:forEach var="ad" items="${userads}">
     <div class="adBox card float-left text-center${ad.id}">
         <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>

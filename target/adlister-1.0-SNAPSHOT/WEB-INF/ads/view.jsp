@@ -37,7 +37,6 @@ ads view.jsp
         ${ad.title}
         ${ad.image}
         ${ad.value}
-
     </c:forEach>
 
 
