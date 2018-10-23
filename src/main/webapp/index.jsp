@@ -54,6 +54,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
+    <jsp:include page="WEB-INF/partials/footer.jsp"/>
 </body>
 </html>
