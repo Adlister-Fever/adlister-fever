@@ -11,6 +11,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+    <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
     <h1 class="lister">Here is the ad:</h1>
 
     <%--<c:forEach var="ad" items="${ads}">--%>
@@ -22,21 +23,30 @@
     <%--</div>--%>
     <%--</c:forEach>--%>
     <div class="card text-center bg-transparent border-0 lister font-white">
-        <div class="display-2">${param.title}</div>
+        <div class="display-2">${title}</div>
         <br>
         <%--<p>AD ID: ${param.id}</p>--%>
-        <div>${param.image}</div>
+        <div>${description}</div>
         <br>
         <div class="display-4">
-            $${param.price}
+            $${price}
         </div>
         <br>
         <div class="display-4">
-            Furniture Type: ${param.desc}
+            Furniture Type: ${image}
         </div>
     </div>
 
-</div>
+    <div class="card">
+        <div class="display-4 lister">Seller:</div>
+        <div><img src="${seller_image}" alt="seller profile picture"></div>
+        <div>${username}</div>
+        <div>${home_phone}</div>
+        <div>${cell}</div>
+        <div>${email}</div>
+    </div>
 
+</div>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>

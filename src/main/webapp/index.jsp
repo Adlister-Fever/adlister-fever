@@ -11,6 +11,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="jumbotron jumbotron-fluid bg-transparent text-center">
         <div class="container">
+<jsp:include page="/WEB-INF/partials/firePics.jsp"/>
             <h1 class="display-2 lister">Welcome to</h1>
             <div class="">
                 <img src="Adlister-Logo-White.png" alt="logo" id="mainlogo" class="">
