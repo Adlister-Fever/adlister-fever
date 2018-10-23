@@ -11,12 +11,16 @@ public class Config {
 
 
     public String getUser() {
-        return "user1";
+
+        return "";
+
     }
 
 
     public String getPassword() {
-        return "111";
+
+        return "";
+
     }
 
 

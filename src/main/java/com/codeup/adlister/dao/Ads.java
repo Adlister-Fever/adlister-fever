@@ -13,5 +13,5 @@ public interface Ads {
     List<Ad> userAll(long id);
     //find by id
 //    Ad findByTitle(String title);
-
+    List<Ad> randomAll();
 }
