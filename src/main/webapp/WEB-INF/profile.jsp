@@ -39,9 +39,8 @@
     </div>
 </div>
 <!-- Large modal -->
-
-<div class="d-flex justify-content-center">
-    <div class="lister mx-4 display-4">Your ads:</div>
+<div class ="lister col-sm-12 display-4 my-2">Your Ads</div>
+<div class="d-flex mx-auto">
     <div class="container text-center">
         <c:forEach var="ad" items="${userads}">
             <div class="adBox card float-left text-center${ad.id}">
