@@ -1,7 +1,7 @@
 <style>
     .image {
         display: none;
-        z-index: 1000;
+        z-index: 1500;
     }
     #image1{
         position: fixed;
