@@ -14,7 +14,7 @@ import java.util.List;
 public class ViewAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String title = request.getParameter("title");
-        Long id = Long.parseLong(request.getParameter("id"));
+        long id = Long.parseLong(request.getParameter("id"));
         List<Ad> allAds = DaoFactory.getAdsDao().all();
         Long seller = null;
         for(Ad ad : allAds){
