@@ -12,11 +12,12 @@
 
 <div class="row">
     <div class="profileBox col-sm-12 text-white border-0 pb-3 mx-4">
-        <div class="row"><h1 class="title display-4">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
+        <div class="row"><h1 class="title display-4 mx-auto">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
 
         <div class="row">
-            <div class="media" id="media">
-                <img class="mr-3 rounded-circle" id="profile-pic" src="${profile}" alt="Generic placeholder image">
+            <div class="media mx-auto" id="media">
+                <img class="mr-3" id="profile-pic" src="${profile}" alt="Generic placeholder image">
+
 
                 <div class="media-body ml-4 text-left">
                     <h4 class="mt-0">${sessionScope.user}</h4>
@@ -24,13 +25,16 @@
                         <div><h5>Email:</h5> ${email}</div>
                         <div><h5>Address:</h5> ${street},</div>
                         <div>${city}, ${state}, ${zip}</div>
+                        <div class="row mx-auto">
+                            <button type="button" class="btn btn-outline-light text-white mt-2 ml-50" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">Edit Profile
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Edit Profile</button>
-        </div>
+
 
     </div>
 </div>
