@@ -15,9 +15,6 @@ import java.util.List;
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
-//        String adtitle = request.getParameter("title");
-//        String adid = request.getParameter("id");
-//        System.out.println("hello from the ads index servlet!!!!! " + adtitle + " " + adid);
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 

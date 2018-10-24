@@ -14,7 +14,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div>
-        <a href="/"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
+        <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
     </div>
     <div class="collapse navbar-collapse sm-justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
