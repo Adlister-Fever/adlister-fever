@@ -7,7 +7,6 @@
     </jsp:include>
 </head>
 <body>
-
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="jumbotron jumbotron-fluid bg-transparent text-center">
         <div class="container">
@@ -28,7 +27,12 @@
                 <img src="https://i.pinimg.com/originals/87/e2/03/87e20377c9c37d0b07dcc10504c636a8.png" alt="First slide">
             </div>
             <c:forEach var="ad" items="${ads}">
-                <div class="carousel-item mx-auto">${ad.description}</div>
+                <div class="carousel-item mx-auto">${ad.description}
+                    <%--<div class="carousel-caption d-none d-md-block">--%>
+                    <div class="text-center text-white">${ad.title}</div>
+                    <div class="text-center text-white">${ad.image}</div>
+                <%--</div>--%>
+                </div>
             </c:forEach>
 
         </div>
