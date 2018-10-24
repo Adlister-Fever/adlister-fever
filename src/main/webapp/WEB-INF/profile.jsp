@@ -118,5 +118,10 @@
 <jsp:include page="/WEB-INF/partials/footer.jsp">
     <jsp:param name="footer" value="Your Footer"/>
 </jsp:include>
+<script>
+    $("#myModal").modal('show')
+
+
+</script>
 </body>
 </html>
