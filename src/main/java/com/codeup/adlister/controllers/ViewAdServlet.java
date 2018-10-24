@@ -34,6 +34,8 @@ public class ViewAdServlet extends HttpServlet {
         request.getSession().setAttribute("home_phone", user.getPhone());
         request.getSession().setAttribute("cell", user.getCell());
         request.getSession().setAttribute("email", user.getEmail());
+        request.getSession().setAttribute("latitude", user.getLatitude());
+        request.getSession().setAttribute("longitude", user.getLongitude());
 //        System.out.println(adtitle + " hello from the ads index servlet");
         request.getRequestDispatcher("/WEB-INF/ads/view.jsp").forward(request, response);
     }

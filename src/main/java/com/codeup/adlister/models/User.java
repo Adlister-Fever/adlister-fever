@@ -20,6 +20,8 @@ public class User {
     private String registered_date;
     private String registered_age;
     private String last_name;
+    private long latitude;
+    private long longitude;
 
     public User() {}
 
@@ -30,7 +32,7 @@ public class User {
 
     }
 
-    public User(long id, String username, String email, String password, String gender, String last_name, String dob_date, String street, String state, String city, String zip_code, String phone, String cell, String picture_large, String registered_date, String registered_age) {
+    public User(long id, String username, String email, String password, String gender, String last_name, String dob_date, String street, String state, String city, String zip_code, String phone, String cell, String picture_large, String registered_date, String registered_age, long latitude, long longitude) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -47,6 +49,9 @@ public class User {
         this.picture_large = picture_large;
         this.registered_date = registered_date;
         this.registered_age = registered_age;
+        this.latitude = latitude;
+        this.longitude = longitude;
+
 
     }
 
@@ -193,5 +198,21 @@ public class User {
 
     public void setRegistered_age(String registered_age) {
         this.registered_age = registered_age;
+    }
+
+    public long getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(long latitude) {
+        this.latitude = latitude;
+    }
+
+    public long getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(long longitude) {
+        this.longitude = longitude;
     }
 }

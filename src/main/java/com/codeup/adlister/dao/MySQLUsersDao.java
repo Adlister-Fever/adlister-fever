@@ -86,7 +86,9 @@ public class MySQLUsersDao implements Users {
                 rs.getString("cell"),
                 rs.getString("picture_large"),
                 rs.getString("registered_date"),
-                rs.getString("registered_age")
+                rs.getString("registered_age"),
+                rs.getLong("latitude"),
+                rs.getLong("longitude")
         );
     }
 
