@@ -12,6 +12,7 @@
         <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
         <h1>Please Log In</h1>
         <form action="/login" method="POST">
+            <input type="hidden" name="from" value="${param.from}">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
@@ -27,17 +28,5 @@
 
 
     <jsp:include page="/WEB-INF/partials/footer.jsp"/>
-    <script>
-        var inputArray = [];
-        $("confirm_Password").keyup(function(event){
-            inputArray.push(event.keyCode);
-            if (inputArray.toString().includes("38,38,40,40,37,39,37,39,66,65,13")) {
-                colorFlash();
-                imageParty();
-                imageDance();
-            }
-        });
-
-    </script>
 </body>
 </html>
