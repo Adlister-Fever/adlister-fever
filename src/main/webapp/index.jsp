@@ -14,7 +14,7 @@
 <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
             <h1 class="display-2 lister">Welcome to</h1>
             <div class="">
-                <img src="Adlister-Logo-White.png" alt="logo" id="mainlogo" class="">
+                <a href="/ads/index"><img src="Adlister-Logo-White.png" alt="logo" id="mainlogo" class=""></a>
             </div>
             <p class="lead">
                 <%--This is a modified jumbotron that occupies the entire horizontal space of its parent.--%>
