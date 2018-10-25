@@ -16,7 +16,7 @@
         <div class="row"><h1 class="title display-4 mx-auto">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
         <div class="row">
             <div class="media mx-auto" id="media">
-                <img class="mr-3" id="profile-pic" src="${profile}" alt="Generic placeholder image">
+                <img class="mr-3 rounded-circle" id="profile-pic" src="${profile}" alt="Generic placeholder image">
 
 
                 <div class="media-body ml-4 text-left">
@@ -41,17 +41,15 @@
 <div class="d-flex mx-auto">
     <div class="container text-center">
         <c:forEach var="ad" items="${userads}">
-            <div class="adBox card float-left text-center">
+            <div class="adBox card float-left text-center d-flex justify-content-center">
                 <h2><a href="/ads/view?id=${ad.id}&title=${ad.title}"><c:out value="${ad.title}"/></a></h2>
                 <p>Price:$ <c:out value="${ad.value}"/></p>
-                <p>Furniture Type: <c:out value="${ad.image}"/></p>
-                <p>${ad.description}</p>
+                <p>Furniture Type: <c:out value="${ad.description}"/></p>
+                <p>${ad.image}</p>
             </div>
         </c:forEach>
     </div>
-
 </div>
-
 <%--<!-- Button trigger modal -->--%>
 <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">--%>
 <%--Launch demo modal--%>

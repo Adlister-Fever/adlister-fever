@@ -27,10 +27,10 @@
                 <img src="https://i.pinimg.com/originals/87/e2/03/87e20377c9c37d0b07dcc10504c636a8.png" alt="First slide">
             </div>
             <c:forEach var="ad" items="${ads}">
-                <div class="carousel-item mx-auto">${ad.description}
+                <div class="carousel-item mx-auto">${ad.image}
                     <%--<div class="carousel-caption d-none d-md-block">--%>
                     <div class="text-center text-white">${ad.title}</div>
-                    <div class="text-center text-white">${ad.image}</div>
+                    <div class="text-center text-white">${ad.description}</div>
                 <%--</div>--%>
                 </div>
             </c:forEach>
