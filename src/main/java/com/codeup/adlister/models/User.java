@@ -207,7 +207,7 @@ public class User {
     }
     public long getLongitude() {
         return longitude;
-
+    }
     public void setLongitude(long longitude) {
         this.longitude = longitude;
     }
