@@ -12,7 +12,7 @@ public class Config {
 
     public String getUser() {
 
-        return "adlister_admin";
+        return "steph";
 
     }
 
@@ -20,7 +20,7 @@ public class Config {
     public String getPassword() {
 
 
-        return "sqlpass";
+        return "codeup";
 
     }
 
