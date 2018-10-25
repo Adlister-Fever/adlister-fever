@@ -33,8 +33,8 @@
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form class="form-inline">
-                    <input class="form-control mx-2" type="search" placeholder="Search ads" aria-label="Search">
+                <form action="/ads/search" method="POST" class="form-inline">
+                    <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -44,10 +44,10 @@
                 <a href="/register">
                     <button type="button" class=" btn btn-outline-light">Register</button>
                 </a>
-                <a href="/ads/index">
+                <a href="#">
                     <button type="button" class=" btn btn-outline-light disabled">Ads</button>
                 </a>
-                <a href="/profile">
+                <a href="#">
                     <button type="button" class=" btn btn-outline-light disabled">Profile</button>
                 </a>
                 <a href="/login?from=${pageContext.request.requestURI}">
@@ -58,8 +58,8 @@
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form class="form-inline">
-                    <input class="form-control mx-2" type="search" placeholder="Search ads" aria-label="Search">
+                <form action="/ads/search" method="POST" class="form-inline">
+                    <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
