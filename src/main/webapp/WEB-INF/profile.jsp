@@ -1,11 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Your Profile"/>
-    </jsp:include>
-</head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
@@ -17,8 +12,6 @@
         <div class="row">
             <div class="media mx-auto" id="media">
                 <img class="mr-3 rounded-circle" id="profile-pic" src="${profile}" alt="Generic placeholder image">
-
-
                 <div class="media-body ml-4 text-left">
                     <h4 class="mt-0"><c:out value="${sessionScope.user}"/></h4>
                     <div>
@@ -37,6 +30,10 @@
     </div>
 </div>
 <!-- Large modal -->
+<h1> THIS IS YOUR MESSAGE: ${message}</h1>
+
+
+
 <div class ="lister col-sm-12 display-4 my-2">Your Ads</div>
 <div class="d-flex mx-auto">
     <div class="container text-center">
@@ -44,42 +41,18 @@
             <div class="adBox card float-left text-center d-flex justify-content-center">
                 <h2><a href="/ads/view?id=${ad.id}&title=${ad.title}"><c:out value="${ad.title}"/></a></h2>
                 <p>Price:$ <c:out value="${ad.value}"/></p>
-                <p>Furniture Type: <c:out value="${ad.description}"/></p>
-                <p>${ad.image}</p>
+                <p>Furniture Type: <c:out value="${ad.image}"/></p>
+                <p>${ad.description}</p>
             </div>
         </c:forEach>
     </div>
 </div>
-<%--<!-- Button trigger modal -->--%>
-<%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">--%>
-<%--Launch demo modal--%>
-<%--</button>--%>
-
-<%--<!-- Modal -->--%>
-<%--<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">--%>
-<%--<div class="modal-dialog modal-dialog-centered" role="document">--%>
-<%--<div class="modal-content">--%>
-<%--<div class="modal-header">--%>
-<%--<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>--%>
-<%--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--<span aria-hidden="true">&times;</span>--%>
-<%--</button>--%>
-<%--</div>--%>
-<%--<div class="modal-body">--%>
-<%--...--%>
-<%--</div>--%>
-<%--<div class="modal-footer">--%>
-<%--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--<button type="button" class="btn btn-primary">Save changes</button>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
+<!-- Large modal -->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content p-4">
-            <form>
+            <form action="/profile" method="post">
                 <div class="form-row">
                     <div class="col">
                         <input type="text" name="username" class="form-control" value="${sessionScope.user}">
@@ -110,58 +83,62 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">State</label>
-                        <select id="inputState" name="state" class="form-control" value="${state}">                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
+
+                            <input type="text" name="state" class="form-control" id="inputState" value="${state}">
+
+                        <%--<select id="inputState" name="state" class="form-control" value="${state}">--%>
+                            <%--<option value="AL">Alabama</option>--%>
+                            <%--<option value="AK">Alaska</option>--%>
+                            <%--<option value="AZ">Arizona</option>--%>
+                            <%--<option value="AR">Arkansas</option>--%>
+                            <%--<option value="CA">California</option>--%>
+                            <%--<option value="CO">Colorado</option>--%>
+                            <%--<option value="CT">Connecticut</option>--%>
+                            <%--<option value="DE">Delaware</option>--%>
+                            <%--<option value="DC">District Of Columbia</option>--%>
+                            <%--<option value="FL">Florida</option>--%>
+                            <%--<option value="GA">Georgia</option>--%>
+                            <%--<option value="HI">Hawaii</option>--%>
+                            <%--<option value="ID">Idaho</option>--%>
+                            <%--<option value="IL">Illinois</option>--%>
+                            <%--<option value="IN">Indiana</option>--%>
+                            <%--<option value="IA">Iowa</option>--%>
+                            <%--<option value="KS">Kansas</option>--%>
+                            <%--<option value="KY">Kentucky</option>--%>
+                            <%--<option value="LA">Louisiana</option>--%>
+                            <%--<option value="ME">Maine</option>--%>
+                            <%--<option value="MD">Maryland</option>--%>
+                            <%--<option value="MA">Massachusetts</option>--%>
+                            <%--<option value="MI">Michigan</option>--%>
+                            <%--<option value="MN">Minnesota</option>--%>
+                            <%--<option value="MS">Mississippi</option>--%>
+                            <%--<option value="MO">Missouri</option>--%>
+                            <%--<option value="MT">Montana</option>--%>
+                            <%--<option value="NE">Nebraska</option>--%>
+                            <%--<option value="NV">Nevada</option>--%>
+                            <%--<option value="NH">New Hampshire</option>--%>
+                            <%--<option value="NJ">New Jersey</option>--%>
+                            <%--<option value="NM">New Mexico</option>--%>
+                            <%--<option value="NY">New York</option>--%>
+                            <%--<option value="NC">North Carolina</option>--%>
+                            <%--<option value="ND">North Dakota</option>--%>
+                            <%--<option value="OH">Ohio</option>--%>
+                            <%--<option value="OK">Oklahoma</option>--%>
+                            <%--<option value="OR">Oregon</option>--%>
+                            <%--<option value="PA">Pennsylvania</option>--%>
+                            <%--<option value="RI">Rhode Island</option>--%>
+                            <%--<option value="SC">South Carolina</option>--%>
+                            <%--<option value="SD">South Dakota</option>--%>
+                            <%--<option value="TN">Tennessee</option>--%>
+                            <%--<option value="TX">Texas</option>--%>
+                            <%--<option value="UT">Utah</option>--%>
+                            <%--<option value="VT">Vermont</option>--%>
+                            <%--<option value="VA">Virginia</option>--%>
+                            <%--<option value="WA">Washington</option>--%>
+                            <%--<option value="WV">West Virginia</option>--%>
+                            <%--<option value="WI">Wisconsin</option>--%>
+                            <%--<option value="WY">Wyoming</option>--%>
+                        <%--</select>--%>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
@@ -173,6 +150,7 @@
         </div>
     </div>
 </div>
+
 <jsp:include page="/WEB-INF/partials/footer.jsp">
     <jsp:param name="footer" value="Your Footer"/>
 </jsp:include>
@@ -182,4 +160,9 @@
 
 </script>
 </body>
+<head>
+    <jsp:include page="/WEB-INF/partials/head.jsp">
+        <jsp:param name="title" value="Your Profile"/>
+    </jsp:include>
+</head>
 </html>

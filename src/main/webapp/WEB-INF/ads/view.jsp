@@ -8,8 +8,8 @@
     </jsp:include>
     <style type="text/css">
         #map-canvas{
-            width: 390px;
-            height: 390px;
+            width: 395px;
+            height: 400px;
         }
     </style>
 </head>
@@ -68,23 +68,28 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel">Message Seller</h4>
+                <h4 class="modal-title" id="myModalLabel">Message ${username}</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <div class="form-group col-md-12">
-                    <label for="inputSubject">Subject</label>
-                    <input type="text" name="subject" class="form-control" id="inputSubject" placeholder="Hello!">
+
+
+                <form method="post" action="/ads/view">
+                    <%--//i want to send this message to the seller's profile inbox--%>
+                    <div class="form-group col-md-12">
+                        <label for="inputSubject">Subject</label>
+                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Hello!">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputSubject">Message</label>
+                        <textarea name="message" class="form-control" id="message" placeholder="Yes I'd like the thing....."></textarea>
+                    </div>
                 </div>
-                <div class="form-group col-md-12">
-                    <label for="inputSubject">Message</label>
-                    <textarea name="message" class="form-control" id="inputMessage" placeholder="Yes I'd like the thing....."></textarea>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-success"></input>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send Message</button>
-            </div>
+                </form>
         </div>
     </div>
 </div>
