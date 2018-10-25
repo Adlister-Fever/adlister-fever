@@ -52,7 +52,7 @@ INSERT INTO users (gender, name_title, first_name, last_name, street, city, stat
 ('male','mr','sigmund','bechtold','bahnhofstraße 125','recklinghausen','sachsen-anhalt',79386,-42.7150,-52.7708,'-10:00','Hawaii','sigmund.bechtold@example.com','d0151bdc-0a47-46b0-a00d-d5d6f3c47d86','angryswan839','$2a$12$PTYIJwN/c4K4heERpqVs1eLikf.z.Rkp.BW4.1ndOV9GQ40qB9azi','aQrExTbP','10f5505a44eb13d247d60a32ae9c6356','1d5a098298840cdea7e78e160bd917211804c831','f1cb7c2491a699a52e73ba640aec189a778fc541209b193c05c16ee591fbc193','1962-04-27T14:08:05Z',56,'2015-06-26T06:30:55Z',3,'0918-3485324','0177-6546860',NULL,NULL,'https://randomuser.me/api/portraits/men/38.jpg','https://randomuser.me/api/portraits/med/men/38.jpg','https://randomuser.me/api/portraits/thumb/men/38.jpg','DE','329c7d3a2bc51d74',1,1,1.2),
 ('male','mr','leon','jones','2699 george street','portmarnock','waterford',38761,20.3184,-5.3689,'+9:00','Tokyo, Seoul, Osaka, Sapporo, Yakutsk','leon.jones@example.com','97e43ce5-36d5-47bb-b958-7225e4722c8c','greenleopard529','$2a$12$jXaWq3XUSc6OPsNSTHkCGOWTctubNaLGMSVxD2Tsm6UoKA1i4V7hC','pyYxEQRC','846c9434c5383e833ce336a1e01501b8','3b2ed9302f25dca8d27608e65a91ef563d417cf1','5b01ad340791a920aeca1d64244b122fccc868ea7c130551b3c759f511e73a99','1951-12-02T16:09:29Z',66,'2004-11-25T06:27:20Z',13,'071-241-1757','081-425-6275','PPS','2088143T','https://randomuser.me/api/portraits/men/32.jpg','https://randomuser.me/api/portraits/med/men/32.jpg','https://randomuser.me/api/portraits/thumb/men/32.jpg','IE','60450324c36bb484',1,1,1.2),
 ('female','madame','michelle','clement','2390 rue paul bert','ferreyres','nidwalden',5493,-54.9375,166.6335,'+2:00','Kaliningrad, South Africa','michelle.clement@example.com','b2a83f48-2dfc-49ae-9812-4e6abb72ea7a','blackfish922','$2a$12$CcWVrQQZs9MrcT54kUTTYOcYZNXPitCE28K4naSHMKe8X12kr6keS','29XMP4gG','a888e7e9af385e14342921f9cef30ccc','9dcdd1df534d9c98548724756fecf682b361737d','42abe4dd7fb4f0795bfb8def0579d618065ee7a0c6464b2bc19399017599653c','1966-04-13T08:06:05Z',52,'2013-04-04T22:35:32Z',5,'(196)-464-4170','(287)-131-4559','AVS','756.8593.1304.18','https://randomuser.me/api/portraits/women/71.jpg','https://randomuser.me/api/portraits/med/women/71.jpg','https://randomuser.me/api/portraits/thumb/women/71.jpg','CH','0dea58e7285e6feb',1,1,1.2),
-('female','miss','sally','denkel','3520 bağdat cd','kastamonu','bilecik',60371,75.5599,33.1418,'-11:00','Midway Island, Samoa','ülkü.denkel@example.com','d4505d72-85ac-4b0d-9d08-cf03ac9674a8','orangerabbit958','$2a$12$WvbsXi4JCCIKIUY1igs6VOMw3.2AwT9xW0p/2rWmYwu1kKqfuLYse','uPYSd1K2','c890c43f67004324d4147b71864c661a','9e356cca0094acd16c946ef8e097c831925eb712','2b44722a1d2a015b4f3b7338c3b05a71c33817994f11c5be56cc786d50132e02','1945-04-19T14:38:39Z',73,'2005-10-26T21:36:54Z',12,'(753)-436-5799','(565)-567-6632',NULL,NULL,'https://randomuser.me/api/portraits/women/63.jpg','https://randomuser.me/api/portraits/med/women/63.jpg','https://randomuser.me/api/portraits/thumb/women/63.jpg','TR','5f97d268894bbe21',1,1,1.2),
+('female','miss','sally','denkel','3520 bağdat cd','kastamonu','bilecik',60371,75.5599,33.1418,'-11:00','Midway Island, Samoa','sally.denkel@example.com','d4505d72-85ac-4b0d-9d08-cf03ac9674a8','orangerabbit958','$2a$12$WvbsXi4JCCIKIUY1igs6VOMw3.2AwT9xW0p/2rWmYwu1kKqfuLYse','uPYSd1K2','c890c43f67004324d4147b71864c661a','9e356cca0094acd16c946ef8e097c831925eb712','2b44722a1d2a015b4f3b7338c3b05a71c33817994f11c5be56cc786d50132e02','1945-04-19T14:38:39Z',73,'2005-10-26T21:36:54Z',12,'(753)-436-5799','(565)-567-6632',NULL,NULL,'https://randomuser.me/api/portraits/women/63.jpg','https://randomuser.me/api/portraits/med/women/63.jpg','https://randomuser.me/api/portraits/thumb/women/63.jpg','TR','5f97d268894bbe21',1,1,1.2),
 ('female','mrs','lilja','justi','812 fredrikinkatu','nurmijärvi','kainuu',46382,-15.7878,21.4359,'-12:00','Eniwetok, Kwajalein','lilja.justi@example.com','73901193-68cf-4822-becf-240b0338fd00','yellowcat366','$2a$12$gSB8Bv/ifA188EbS4G.LVudjUog7xIeZpdW5DiSsMvOW.F/qLeYEi','IW0Glk84','fe2e550b69ec71bab6622914cdc6c391','2c114569d7a02f52435e4b2ef78f361245d7b7b7','644efab89e6512485e03bbee107ce8933c6463cec6b40c9aafd19ed4882179b7','1945-01-22T03:09:17Z',73,'2014-03-24T02:04:43Z',4,'03-259-800','044-418-22-81','HETU','NaNNA760undefined','https://randomuser.me/api/portraits/women/5.jpg','https://randomuser.me/api/portraits/med/women/5.jpg','https://randomuser.me/api/portraits/thumb/women/5.jpg','FI','e7c39ad1c1fa19bc',1,1,1.2),
 ('male','mr','thomas','bowman','5184 george street','carlow','kerry',43549,18.8027,-82.5921,'-3:30','Newfoundland','thomas.bowman@example.com','e1483265-8351-446f-86e4-9a8652ab25a0','tinyfish625','$2a$12$hY1R2W/ymmv4UdUwm4lY5./qYAA4Wa0m/0t.bxjwAsNF5QSW8fGT6','Gpuhtx9b','92fe3edf559d6d2714317c13b76d3507','9c4f74cc3d99d64d7852f8a98b44e5a0402bceb7','d0093af48796675ce1ca875fce69824a64ff4aba37645410c69675a87e7c0e8c','1979-11-06T12:54:38Z',38,'2011-01-11T19:30:03Z',7,'031-167-1360','081-591-6920','PPS','9427189T','https://randomuser.me/api/portraits/men/41.jpg','https://randomuser.me/api/portraits/med/men/41.jpg','https://randomuser.me/api/portraits/thumb/men/41.jpg','IE','64f110dafceb233d',1,1,1.2),
 ('male','mr','sammy','sullivan','583 main street','sunderland','warwickshire','D3C 9NF',15.8327,-13.2066,'+2:00','Kaliningrad, South Africa','sammy.sullivan@example.com','de806dec-b2db-4fa3-8ec1-3eb3cf375aa8','smallbutterfly303','$2a$12$0QH92VqOIOnBCIb7PC3QsuGXc12YQLctx0.oRuiPZ7zF7jMWPxkoy','SlZR8OmI','3b6df1e2599cad595d3bf885bd046488','7d0a54cac2d1fd4bd4cd732b41736eb9e4195358','9a35b2b5de8bd7a6566db8fa33343e203b9d176f3081b2d3ea9aaec2c07f13fd','1993-07-14T12:27:31Z',25,'2013-11-27T19:38:53Z',4,'0115815 799 2507','0742-463-125','NINO','RX 68 02 45 A','https://randomuser.me/api/portraits/men/21.jpg','https://randomuser.me/api/portraits/med/men/21.jpg','https://randomuser.me/api/portraits/thumb/men/21.jpg','GB','5649d9218b8ce822',1,1,1.2),
@@ -142,6 +142,79 @@ ALTER TABLE users DROP info_version;
 ALTER TABLE users DROP picture_medium;
 ALTER TABLE users DROP picture_thumbnail;
 
+
+CREATE TABLE categories(
+id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+cat_name VARCHAR(100) NOT NULL,
+PRIMARY KEY (id)
+);
+
+INSERT INTO categories(cat_name) VALUES
+('Trendy'),
+('Bed'),
+('Bookcase'),
+('Chair'),
+('Storage'),
+('Lamp'),
+('Table'),
+('Electronic'),
+('Cute'),
+('Historical'),
+('Other'),
+('Music');
+
+CREATE TABLE ad_categories(
+ad_id INT UNSIGNED DEFAULT NULL,
+cat_id INT UNSIGNED DEFAULT NULL,
+FOREIGN KEY (ad_id) REFERENCES ads(id),
+FOREIGN KEY (cat_id) REFERENCES categories(id)
+);
+
+insert into ad_categories(ad_id, cat_id) values
+(1,11),
+(2,11),
+(3,11),
+(4,11),
+(5,11),
+(6,2),
+(7,3),
+(8,4),
+(9,5),
+(10,5),
+(11,6),
+(12,6),
+(13,7),
+(14,4),
+(15,7),
+(16,8),
+(17,9),
+(18,9),
+(19,9),
+(20,9),
+(21,10),
+(22,1),
+(23,10),
+(24,1),
+(25,1),
+(26,9),
+(27,9),
+(28,8),
+(29,8),
+(30,2),
+(31,4),
+(32,4),
+(33,1),
+(34,5),
+(35,6),
+(36,8),
+(37,7),
+(38,1),
+(39,8),
+(40,5),
+(41,7),
+(42,7),
+(43,4),
+(44,4);
 
 
 
