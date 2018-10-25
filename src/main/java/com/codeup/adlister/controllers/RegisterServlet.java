@@ -39,12 +39,7 @@ public class RegisterServlet extends HttpServlet {
 
         boolean duplicate = DaoFactory.getUsersDao().findDuplicate(username);
         if(duplicate){
-            //need to display error message
-// On a failed login you generally forward back to the login.jsp,
-// but add some form of error message/object/whatever attribute
-// to the request. The login.jsp will have a bit of code somewhere
-// that checks if this attribute exists on the request, if so it then
-// displays it.
+
             String errorMessage = "Username already exists!";
             request.setAttribute("errorMessage", errorMessage);
             try {
