@@ -14,7 +14,7 @@
     <c:forEach var="ad" items="${ads}">
         <div class="adBox card float-left col-3 text-center">
             <%--this puts the title parameter in the url--%>
-            <h2><a href='/ads/view?title=${ad.title}&id=${ad.id}'> <div>${ad.title}</div> </a></h2>
+            <h2><a href='/ads/view?title=${ad.title}&id=${ad.id}&from=${pageContext.request.requestURI}'><div>${ad.title}</div></a></h2>
                 <%--&desc=${ad.image}--%>
                 <p>Price:$ ${ad.value}</p>
             <p>Furniture Type: ${ad.image}</p>
