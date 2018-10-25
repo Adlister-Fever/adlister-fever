@@ -142,6 +142,14 @@ ALTER TABLE users DROP info_version;
 ALTER TABLE users DROP picture_medium;
 ALTER TABLE users DROP picture_thumbnail;
 
+ALTER TABLE users ADD unique (first_name);
+ALTER TABLE users ADD unique (username);
 
-
-
+-- +----------+             +-------------+
+-- |  users   |             |    ads      |
+-- +----------+             +-------------+
+-- | id       |<------,     | id          |
+-- | username |       `-----| user_id     | <-- foreign key to users table
+-- | email    |             | title       |
+-- | password |             | description |
+-- +----------+             +-------------+
