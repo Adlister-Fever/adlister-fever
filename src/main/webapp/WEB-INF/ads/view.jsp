@@ -44,6 +44,7 @@
     </div>
 
     <div class="card-group">
+
         <div class="card border bg-transparent mb-2" style="border: 2px dashed #fff !important;, display: inline-block !important;">
             <div class="card-body m-2 text-white">
                 <div class="display-4 lister">Seller:</div>
@@ -62,6 +63,7 @@
 </div>
 <!-------load the Google Maps API ----------->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb1pBX7tNsVucdn6OQuC1mxSRJQ2qPpUs"></script>
+
 <!-------script to show things on map-------->
 <script type="text/javascript">
     (function() {
@@ -86,6 +88,7 @@
             // Set the zoom level
             zoom: 8,
             tilt: 45,
+
             // This sets the center of the map at our location
             // center: {
             //     lat:  29.426791,
@@ -98,6 +101,7 @@
         };
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var marker = new google.maps.Marker({
             position: mapOptions.center,
@@ -105,6 +109,7 @@
             // icon: iconBase + 'fishing.png',
             animation: google.maps.Animation.DROP
         });
+
         // var infowindow = new google.maps.InfoWindow({
         //     content: "<h3>Like, literally the best asian fusion place</h3>" +
         //         "<ul style='list-style-type:square; text-align:left'><li>Bento Boxes</li>" +
@@ -112,6 +117,7 @@
         //         "<li>Sushi</li>" +
         //         "<li>MORE</li></ul>"
         // });
+
         //marker animation: bounce on click
         marker.addListener('click', toggleBounce);
         marker.addListener('click', function(){
@@ -125,6 +131,7 @@
                 marker.setAnimation(null);
             }
         }
+
     })();
 </script>
 <jsp:include page="/WEB-INF/partials/footer.jsp"/>
