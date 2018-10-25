@@ -15,10 +15,9 @@ public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
-            return;
+        } else {
+            request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
         }
-
-        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = DaoFactory.getUsersDao().findByUsername(request.getParameter("username"));

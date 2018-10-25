@@ -14,4 +14,6 @@ public interface Ads {
     //find by id
 //    Ad findByTitle(String title);
     List<Ad> randomAll();
+    List<Ad> titleSearch(String searchTerm);
+//    List<Ad> descriptionSearch(String searchTerm);
 }

@@ -8,8 +8,8 @@
     </jsp:include>
     <style type="text/css">
         #map-canvas{
-            width: 350px;
-            height: 350px;
+            width: 395px;
+            height: 400px;
         }
     </style>
 </head>
@@ -20,29 +20,23 @@
     <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
     <h1 class="lister">Here is the ad:</h1>
 
-    <%--<c:forEach var="ad" items="${ads}">--%>
-    <%--<div class="col-md-6 ${ad.id}">--%>
-    <%--<h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>--%>
-    <%--<p>Price: ${param.value}</p>--%>
-    <%--<p>Furniture Type: ${sessionScope.id}</p>--%>
-    <%--<p>${ad.description}</p>--%>
-    <%--</div>--%>
-    <%--</c:forEach>--%>
+   <%--MAIN AD DISPLAY--%>
     <div class="card text-center bg-transparent border-0 lister font-white">
         <div class="display-2">${title}</div>
         <br>
         <%--<p>AD ID: ${param.id}</p>--%>
-        <div>${description}</div>
+        <div>${image}</div>
         <br>
         <div class="display-4">
             $${price}
         </div>
         <br>
         <div class="display-4">
-            Furniture Type: ${image}
+            Furniture Type: ${description}
         </div>
     </div>
 
+    <%--SELLER AND MAP DISPLAY--%>
     <div class="card-group">
 
         <div class="card border bg-transparent mb-2" style="border: 2px dashed #fff !important;, display: inline-block !important;">
@@ -53,16 +47,60 @@
                 <div>${home_phone}</div>
                 <div>${cell}</div>
                 <div>${email}</div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#myModal">
+                    Message Seller
+                </button>
             </div>
         </div>
         <div class="card border-0 bg-transparent" style="display: inline-block !important;">
             <!-------div to hold map--------------------->
-            <div class="card-body" id="map-canvas"></div>
+            <div class="card-body" id="map-canvas">hello map goes here</div>
         </div>
     </div>
 </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Message ${username}</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+
+
+                <form method="post" action="/ads/view">
+                    <%--//i want to send this message to the seller's profile inbox--%>
+                    <div class="form-group col-md-12">
+                        <label for="inputSubject">Subject</label>
+                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Hello!">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputSubject">Message</label>
+                        <textarea name="message" class="form-control" id="message" placeholder="Yes I'd like the thing....."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-success"></input>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+<jsp:include page="/WEB-INF/partials/footer.jsp">
+    <jsp:param name="footer" value="Your Footer"/>
+</jsp:include>
 <!-------load the Google Maps API ----------->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb1pBX7tNsVucdn6OQuC1mxSRJQ2qPpUs"></script>
+
+
 
 <!-------script to show things on map-------->
 <script type="text/javascript">
@@ -70,19 +108,9 @@
         "use strict";
         <%= request.getAttribute("latitude") %>
         <%= request.getAttribute("longitude") %>
-        // var restaurants = [
-        //     {
-        //         name: "sapporo"
-        //         lat:29.572130,
-        //         lng:-98.597526
-        //     }
-        //     {
-        //         name: "la panaderia"
-        //     }
-        //     {
-        //         name: "piatti's"
-        //     }
-        // ];
+
+
+
         // Set our map options
         var mapOptions = {
             // Set the zoom level
@@ -132,8 +160,18 @@
             }
         }
 
+
+
+
+
+
     })();
 </script>
-<jsp:include page="/WEB-INF/partials/footer.jsp"/>
+
+<script>
+
+    $("#myModal").modal('hide');
+
+</script>
 </body>
 </html>

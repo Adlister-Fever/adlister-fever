@@ -13,7 +13,7 @@ public class Config {
     public String getUser() {
 
 
-        return "user1";
+        return "steph";
 
     }
 
@@ -22,8 +22,7 @@ public class Config {
 
 
 
-        return "111";
-
+        return "codeup";
 
     }
 

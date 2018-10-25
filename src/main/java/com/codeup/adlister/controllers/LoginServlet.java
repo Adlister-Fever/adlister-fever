@@ -1,9 +1,11 @@
 package com.codeup.adlister.controllers;
+
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
 import com.codeup.adlister.util.Caps;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,10 +50,15 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("email", user.getEmail());
             request.getSession().setAttribute("gender", user.getGender());
             request.getSession().setAttribute("userads", userads);
-
-            response.sendRedirect("/profile");
+//            request.getSession().setAttribute("from", request.getParameter("from"));
+//            if (request.getSession().getAttribute("from") != null) {
+//                response.sendRedirect((String) request.getSession().getAttribute("from"));
+//            } else {
+                response.sendRedirect("/profile");
+//            }
         } else {
             response.sendRedirect("/login");
         }
     }
 }
+
