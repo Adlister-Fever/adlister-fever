@@ -17,8 +17,8 @@
             <h2><a href='/ads/view?title=${ad.title}&id=${ad.id}&from=${pageContext.request.requestURI}'><div>${ad.title}</div></a></h2>
                 <%--&desc=${ad.image}--%>
             <p>Price:$ ${ad.value}</p>
-            <p>Furniture Type: ${ad.image}</p>
-            <p>${ad.description}</p>
+            <p>Furniture Type: ${ad.description}</p>
+            <p>${ad.image}</p>
         </div>
     </c:forEach>
 </div>
