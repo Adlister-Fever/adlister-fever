@@ -142,79 +142,90 @@ ALTER TABLE users DROP info_version;
 ALTER TABLE users DROP picture_medium;
 ALTER TABLE users DROP picture_thumbnail;
 
+ALTER TABLE users ADD unique (first_name);
+ALTER TABLE users ADD unique (username);
 
-CREATE TABLE categories(
-id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-cat_name VARCHAR(100) NOT NULL,
-PRIMARY KEY (id)
-);
+-- +----------+             +-------------+
+-- |  users   |             |    ads      |
+-- +----------+             +-------------+
+-- | id       |<------,     | id          |
+-- | username |       `-----| user_id     | <-- foreign key to users table
+-- | email    |             | title       |
+-- | password |             | description |
+-- +----------+             +-------------+
 
-INSERT INTO categories(cat_name) VALUES
-('Trendy'),
-('Bed'),
-('Bookcase'),
-('Chair'),
-('Storage'),
-('Lamp'),
-('Table'),
-('Electronic'),
-('Cute'),
-('Historical'),
-('Other'),
-('Music');
+-- CREATE TABLE categories(
+-- id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+-- cat_name VARCHAR(100) NOT NULL,
+-- PRIMARY KEY (id)
+-- );
 
-CREATE TABLE ad_categories(
-ad_id INT UNSIGNED DEFAULT NULL,
-cat_id INT UNSIGNED DEFAULT NULL,
-FOREIGN KEY (ad_id) REFERENCES ads(id),
-FOREIGN KEY (cat_id) REFERENCES categories(id)
-);
+-- INSERT INTO categories(cat_name) VALUES
+-- ('Trendy'),
+-- ('Bed'),
+-- ('Bookcase'),
+-- ('Chair'),
+-- ('Storage'),
+-- ('Lamp'),
+-- ('Table'),
+-- ('Electronic'),
+-- ('Cute'),
+-- ('Historical'),
+-- ('Other'),
+-- ('Music');
 
-insert into ad_categories(ad_id, cat_id) values
-(1,11),
-(2,11),
-(3,11),
-(4,11),
-(5,11),
-(6,2),
-(7,3),
-(8,4),
-(9,5),
-(10,5),
-(11,6),
-(12,6),
-(13,7),
-(14,4),
-(15,7),
-(16,8),
-(17,9),
-(18,9),
-(19,9),
-(20,9),
-(21,10),
-(22,1),
-(23,10),
-(24,1),
-(25,1),
-(26,9),
-(27,9),
-(28,8),
-(29,8),
-(30,2),
-(31,4),
-(32,4),
-(33,1),
-(34,5),
-(35,6),
-(36,8),
-(37,7),
-(38,1),
-(39,8),
-(40,5),
-(41,7),
-(42,7),
-(43,4),
-(44,4);
+-- CREATE TABLE ad_categories(
+-- ad_id INT UNSIGNED DEFAULT NULL,
+-- cat_id INT UNSIGNED DEFAULT NULL,
+-- FOREIGN KEY (ad_id) REFERENCES ads(id),
+-- FOREIGN KEY (cat_id) REFERENCES categories(id)
+-- );
+
+-- insert into ad_categories(ad_id, cat_id) values
+-- (1,11),
+-- (2,11),
+-- (3,11),
+-- (4,11),
+-- (5,11),
+-- (6,2),
+-- (7,3),
+-- (8,4),
+-- (9,5),
+-- (10,5),
+-- (11,6),
+-- (12,6),
+-- (13,7),
+-- (14,4),
+-- (15,7),
+-- (16,8),
+-- (17,9),
+-- (18,9),
+-- (19,9),
+-- (20,9),
+-- (21,10),
+-- (22,1),
+-- (23,10),
+-- (24,1),
+-- (25,1),
+-- (26,9),
+-- (27,9),
+-- (28,8),
+-- (29,8),
+-- (30,2),
+-- (31,4),
+-- (32,4),
+-- (33,1),
+-- (34,5),
+-- (35,6),
+-- (36,8),
+-- (37,7),
+-- (38,1),
+-- (39,8),
+-- (40,5),
+-- (41,7),
+-- (42,7),
+-- (43,4),
+-- (44,4);
 
 
 
