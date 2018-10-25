@@ -9,11 +9,12 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
+    <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
     <div class="lister display-3 p-2">Here are all the ads!</div>
     <c:forEach var="ad" items="${ads}">
         <div class="adBox card float-left col-3 text-center">
             <%--this puts the title parameter in the url--%>
-            <h2><a href='/ads/view?title=${ad.title}&id=${ad.id}&price=${ad.value}&image=${ad.description}'> <div>${ad.title}</div> </a></h2>
+            <h2><a href='/ads/view?title=${ad.title}&id=${ad.id}'> <div>${ad.title}</div> </a></h2>
                 <%--&desc=${ad.image}--%>
                 <p>Price:$ ${ad.value}</p>
             <p>Furniture Type: ${ad.image}</p>
@@ -21,5 +22,6 @@
         </div>
         </c:forEach>
     </div>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>
