@@ -12,7 +12,8 @@ public class Config {
 
     public String getUser() {
 
-        return "steph";
+
+        return "user1";
 
     }
 
@@ -20,7 +21,9 @@ public class Config {
     public String getPassword() {
 
 
-        return "codeup";
+
+        return "111";
+
 
     }
 
