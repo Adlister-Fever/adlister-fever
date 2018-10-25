@@ -1,3 +1,6 @@
+<audio>
+    <source src="../../Fire-8Bit.mp3">
+</audio>
 <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -13,6 +16,9 @@
     function fireParty() {
         var danceCount = 0;
         var interval = 250;
+        var audio =  $('audio')[0];
+        audio.loop = true;
+        audio.play();
         setInterval(function () {
             if (danceCount === 0) {
                 $(".image").css("display", "none");
