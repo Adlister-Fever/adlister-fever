@@ -19,18 +19,14 @@
 h1,.title{
     font-family: "Dancing Script", cursive;
     color: white;
-    font-size: ;
     !important;
 }
 #profile-pic{
     border-radius: 25%;
 }
-
-
-
-
-
-
+#newAddDesc{
+    display: inline-block;
+}
 
 #mainlogo{
     width: 200px;
