@@ -13,32 +13,32 @@
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div>
+    <div class="mr-1">
         <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
     </div>
     <div class="collapse navbar-collapse sm-justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <c:if test="${user != null}">
                 <a href="/ads/create">
-                    <button type="button" class=" btn btn-outline-light">Create</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Create</button>
                 </a>
                 <a href="/ads/index">
-                    <button type="button" class=" btn btn-outline-light">Ads</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Ads</button>
                 </a>
                 <a href="/profile">
-                    <button type="button" class=" btn btn-outline-light">Profile</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Profile</button>
                 </a>
 
                 <a href="/logout">
-                    <button type="button" class=" btn btn-outline-light">Logout</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Logout</button>
                 </a>
             </c:if>
             <c:if test="${user == null}">
                 <a href="/register">
-                    <button type="button" class=" btn btn-outline-light">Register</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Register</button>
                 </a>
                 <a href="/login">
-                    <button type="button" class=" btn btn-outline-light">Login</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Login</button>
                 </a>
             </c:if>
         </div>
