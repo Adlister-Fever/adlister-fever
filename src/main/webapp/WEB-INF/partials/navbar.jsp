@@ -50,7 +50,7 @@
                 <a href="#">
                     <button type="button" class=" btn btn-outline-light disabled">Profile</button>
                 </a>
-                <a href="/login?from=${pageContext.request.requestURI}">
+                <a href="/login">
                     <button type="button" class=" btn btn-outline-light">Login</button>
                 </a>
             </div>
