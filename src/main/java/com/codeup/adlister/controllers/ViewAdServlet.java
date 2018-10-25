@@ -17,8 +17,8 @@ public class ViewAdServlet extends HttpServlet {
         long id = Long.parseLong(request.getParameter("id"));
         List<Ad> allAds = DaoFactory.getAdsDao().all();
         Long seller = null;
-        for(Ad ad : allAds){
-            if(ad.getId() == id && ad.getTitle().equals(title)){
+        for (Ad ad : allAds) {
+            if (ad.getId() == id && ad.getTitle().equals(title)) {
                 request.getSession().setAttribute("id", ad.getId());
                 request.getSession().setAttribute("user_id", ad.getUserId());
                 request.getSession().setAttribute("title", ad.getTitle());
@@ -38,5 +38,21 @@ public class ViewAdServlet extends HttpServlet {
         request.getSession().setAttribute("longitude", user.getLongitude());
 //        System.out.println(adtitle + " hello from the ads index servlet");
         request.getRequestDispatcher("/WEB-INF/ads/view.jsp").forward(request, response);
+    }
+
+    //in theory, this will send the info to the profile BUT IT TOTALLY DOESNT
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String subject = request.getParameter("subject");
+        String message = request.getParameter("message");
+        try {
+            request.getSession().setAttribute("subject", subject);
+            request.getSession().setAttribute("message", message);
+            request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+
+        } catch (ServletException e) {
+            e.printStackTrace();
+        }
+
+//        response.sendRedirect("/profile");
     }
 }

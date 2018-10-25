@@ -37,6 +37,10 @@
     </div>
 </div>
 <!-- Large modal -->
+<h1> THIS IS YOUR MESSAGE: ${message}</h1>
+
+
+
 <div class ="lister col-sm-12 display-4 my-2">Your Ads</div>
 <div class="d-flex mx-auto">
     <div class="container text-center">
