@@ -120,6 +120,17 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
+    public List<Ad> search(String searchTerm) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM products WHERE name LIKE ?");
+            stmt.setString(1, searchTerm);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error executing ad search.", e);
+        }
+    }
 
 //    public String getCategory(){
 //        PreparedStatement stmt;
