@@ -34,6 +34,24 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    public Boolean findDuplicate(String username){
+        Boolean duplicate;
+        String query = "SELECT * FROM users WHERE username = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.first()){
+                duplicate = true;
+            }else{
+                duplicate = false;
+            }
+            return duplicate;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+
     @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
@@ -50,6 +68,7 @@ public class MySQLUsersDao implements Users {
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
+
             throw new RuntimeException("Error creating new user", e);
         }
     }
