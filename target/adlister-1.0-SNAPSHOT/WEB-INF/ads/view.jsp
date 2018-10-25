@@ -44,25 +44,32 @@
     </div>
 
     <div class="card-group">
-
-        <div class="card border bg-transparent mb-2" style="border: 2px dashed #fff !important;, display: inline-block !important;">
-            <div class="card-body m-2 text-white">
-                <div class="display-4 lister">Seller:</div>
-                <div><img src="${seller_image}" alt="seller profile picture"></div>
-                <div>${username}</div>
-                <div>${home_phone}</div>
-                <div>${cell}</div>
-                <div>${email}</div>
-            </div>
-        </div>
-        <div class="card border-0 bg-transparent" style="display: inline-block !important;">
-            <!-------div to hold map--------------------->
-            <div class="card-body" id="map-canvas"></div>
+    <div class="card border bg-transparent mb-2" style="border: 2px dashed #fff !important;, display: inline-block !important;">
+        <div class="card-body m-2 text-white">
+            <div class="display-4 lister">Seller:</div>
+            <div><img src="${seller_image}" alt="seller profile picture"></div>
+            <div>${username}</div>
+            <div>${home_phone}</div>
+            <div>${cell}</div>
+            <div>${email}</div>
         </div>
     </div>
+    <div class="card border-0 bg-transparent" style="display: inline-block !important;">
+        <!-------div to hold map--------------------->
+        <div class="card-body" id="map-canvas"></div>
+    </div>
+    </div>
+
+
+
+
+
+
+
 </div>
 <!-------load the Google Maps API ----------->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb1pBX7tNsVucdn6OQuC1mxSRJQ2qPpUs"></script>
+
 
 <!-------script to show things on map-------->
 <script type="text/javascript">
@@ -98,7 +105,10 @@
                 lat: ${latitude},
                 lng: ${longitude}
             }
+
+
         };
+
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
@@ -108,6 +118,7 @@
             map: map,
             // icon: iconBase + 'fishing.png',
             animation: google.maps.Animation.DROP
+
         });
 
         // var infowindow = new google.maps.InfoWindow({
@@ -117,6 +128,10 @@
         //         "<li>Sushi</li>" +
         //         "<li>MORE</li></ul>"
         // });
+
+
+
+
 
         //marker animation: bounce on click
         marker.addListener('click', toggleBounce);
@@ -129,6 +144,7 @@
             } else {
                 marker.setAnimation(google.maps.Animation.BOUNCE);
                 marker.setAnimation(null);
+
             }
         }
 

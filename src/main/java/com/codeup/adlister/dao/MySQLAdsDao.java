@@ -87,9 +87,9 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
-            rs.getString("image"),
+            rs.getString("description"),
             rs.getLong("price"),
-            rs.getString("description")
+            rs.getString("image")
         );
     }
 
@@ -131,5 +131,17 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error executing ad search.", e);
         }
     }
+
+//    public String getCategory(){
+//        PreparedStatement stmt;
+//        try{
+//            stmt = connection.prepareStatement(//PUT YOUR SQL STATEMENT HERE);
+//                    ResultSet rs=stmt.executeQuery();
+//                    return //WHATEVER YOURE GETTING BACK GOES HERE;
+//        }catch (SQLException e) {
+//            throw new RuntimeException("Error retrieving category data", e);
+//
+//        }
+//    }
 
 }

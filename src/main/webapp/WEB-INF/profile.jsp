@@ -9,100 +9,166 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <jsp:include page="/WEB-INF/partials/firePics.jsp"/>
+
 <div class="row">
     <div class="profileBox col-sm-12 text-white border-0 pb-3 mx-4">
-        <div class="row"><h1 class="title display-4">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
 
+        <div class="row"><h1 class="title display-4 mx-auto">Welcome, ${sessionScope.user} ${sessionScope.last_name}!</h1></div>
         <div class="row">
-            <div class="media" id="media">
-                <img class="mr-3" id="profile-pic" src="${profile}" alt="Generic placeholder image">
+            <div class="media mx-auto" id="media">
+                <img class="mr-3 rounded-circle" id="profile-pic" src="${profile}" alt="Generic placeholder image">
+
 
                 <div class="media-body ml-4 text-left">
-                    <h4 class="mt-0">${sessionScope.user}</h4>
+                    <h4 class="mt-0"><c:out value="${sessionScope.user}"/></h4>
                     <div>
-                        <div><h5>Email:</h5> ${email}</div>
-                        <div><h5>Address:</h5> ${street},</div>
-                        <div>${city}, ${state}, ${zip}</div>
+                        <div><h5>Email:</h5> <c:out value="${email}"/></div>
+                        <div><h5>Address:</h5> <c:out value="${street}"/>,</div>
+                        <div><c:out value="${city}"/>, <c:out value="${state}"/>, <c:out value="${zip}"/></div>
+                        <div class="row mx-auto">
+                            <button type="button" class="btn btn-outline-light text-white mt-2 ml-50" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg">Edit Profile
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <button type="button" class="btn btn-outline-light text-white mt-2" data-toggle="modal"
-                    data-target=".bd-example-modal-lg">Edit Profile
-            </button>
-        </div>
-
-
-
     </div>
 </div>
 <!-- Large modal -->
-
-<h1 class="lister mx-4">Your ads:</h1>
-<div class="container text-center">
-    <c:forEach var="ad" items="${userads}">
-    <div class="adBox card float-left text-center${ad.id}">
-        <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>
-        <p>Price:$ ${ad.value}</p>
-        <p>Furniture Type: ${ad.image}</p>
-        <p>${ad.description}</p>
+<div class ="lister col-sm-12 display-4 my-2">Your Ads</div>
+<div class="d-flex mx-auto">
+    <div class="container text-center">
+        <c:forEach var="ad" items="${userads}">
+            <div class="adBox card float-left text-center d-flex justify-content-center">
+                <h2><a href="/ads/view?id=${ad.id}&title=${ad.title}"><c:out value="${ad.title}"/></a></h2>
+                <p>Price:$ <c:out value="${ad.value}"/></p>
+                <p>Furniture Type: <c:out value="${ad.description}"/></p>
+                <p>${ad.image}</p>
+            </div>
+        </c:forEach>
     </div>
-    </c:forEach>
 </div>
+<%--<!-- Button trigger modal -->--%>
+<%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">--%>
+<%--Launch demo modal--%>
+<%--</button>--%>
 
-
-
+<%--<!-- Modal -->--%>
+<%--<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">--%>
+<%--<div class="modal-dialog modal-dialog-centered" role="document">--%>
+<%--<div class="modal-content">--%>
+<%--<div class="modal-header">--%>
+<%--<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>--%>
+<%--<button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
+<%--<span aria-hidden="true">&times;</span>--%>
+<%--</button>--%>
+<%--</div>--%>
+<%--<div class="modal-body">--%>
+<%--...--%>
+<%--</div>--%>
+<%--<div class="modal-footer">--%>
+<%--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
+<%--<button type="button" class="btn btn-primary">Save changes</button>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
+<%--</div>--%>
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content p-4">
             <form>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" name="username" class="form-control" value="${sessionScope.user}">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="last_name" class="form-control" value="${sessionScope.last_name}">
+                    </div>
+                </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <input type="email" name="email" class="form-control" id="inputEmail4" value="${email}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        <input type="password" name="newPassword" class="form-control" id="inputPassword4" placeholder="Password" disabled>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <input type="text" name="address" class="form-control" id="inputAddress" value="${street}">
                 </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2"
-                           placeholder="Apartment, studio, or floor">
-                </div>
+
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" name="city" class="form-control" id="inputCity" value="${city}">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
+                        <select id="inputState" name="state" class="form-control" value="${state}">                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District Of Columbia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                        <input type="text" name="zip" class="form-control" id="inputZip" value="${zip}">
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>
     </div>
@@ -110,5 +176,10 @@
 <jsp:include page="/WEB-INF/partials/footer.jsp">
     <jsp:param name="footer" value="Your Footer"/>
 </jsp:include>
+<script>
+    $("#myModal").modal('show')
+
+
+</script>
 </body>
 </html>

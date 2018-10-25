@@ -24,6 +24,7 @@
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text" required>
+                <div id="error" class="text-danger">${errorMessage}</div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
