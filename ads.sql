@@ -144,6 +144,19 @@ ALTER TABLE users DROP picture_thumbnail;
 ALTER TABLE users ADD unique (first_name);
 ALTER TABLE users ADD unique (username);
 
+
+
+
+
+create table messages (
+id int unsigned not null auto_increment,
+text varchar (289),
+user_id int unsigned default null,
+primary key (id),
+FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE cascade
+);
+
+
 -- +----------+             +-------------+
 -- |  users   |             |    ads      |
 -- +----------+             +-------------+
