@@ -50,12 +50,12 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("email", user.getEmail());
             request.getSession().setAttribute("gender", user.getGender());
             request.getSession().setAttribute("userads", userads);
-            request.getSession().setAttribute("from", request.getParameter("from"));
-            if (request.getSession().getAttribute("from") != null) {
-                response.sendRedirect((String) request.getSession().getAttribute("from"));
-            } else {
+//            request.getSession().setAttribute("from", request.getParameter("from"));
+//            if (request.getSession().getAttribute("from") != null) {
+//                response.sendRedirect((String) request.getSession().getAttribute("from"));
+//            } else {
                 response.sendRedirect("/profile");
-            }
+//            }
         } else {
             response.sendRedirect("/login");
         }
