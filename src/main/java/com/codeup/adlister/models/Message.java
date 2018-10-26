@@ -4,6 +4,7 @@ public class Message {
     private long id;
     private long user_id;
     private String text;
+    private String title;
 
     public Message(long id, long user_id, String text) {
         this.id = id;
@@ -14,6 +15,12 @@ public class Message {
     public Message(long user_id, String text) {
         this.user_id = user_id;
         this.text = text;
+    }
+
+    public Message(long user_id, String text, String title) {
+        this.user_id = user_id;
+        this.text = text;
+        this.title = title;
     }
 
     public long getId() {
@@ -38,5 +45,13 @@ public class Message {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
