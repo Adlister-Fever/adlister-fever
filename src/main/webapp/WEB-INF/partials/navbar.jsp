@@ -17,24 +17,24 @@
         <c:if test="${user != null}">
             <div class="navbar-nav mr-auto">
                 <a href="/ads/create">
-                    <button type="button" class=" btn btn-outline-light">Create</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Create</button>
                 </a>
                 <a href="/ads/index">
-                    <button type="button" class=" btn btn-outline-light">Ads</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Ads</button>
                 </a>
                 <a href="/profile">
-                    <button type="button" class=" btn btn-outline-light">Profile</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Profile</button>
                 </a>
                 <a href="/logout">
-                    <button type="button" class=" btn btn-outline-light">Logout</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Logout</button>
                 </a>
             </div>
             <div class="mx-auto order-0">
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form class="form-inline">
-                    <input class="form-control mx-2" type="search" placeholder="Search ads" aria-label="Search">
+                <form action="/ads/search" method="POST" class="form-inline my-auto">
+                    <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -42,25 +42,27 @@
         <c:if test="${user == null}">
             <div class="navbar-nav mr-auto">
                 <a href="/register">
-                    <button type="button" class=" btn btn-outline-light">Register</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Register</button>
                 </a>
                 <a href="/ads/index">
                     <button type="button" class=" btn btn-outline-light">Ads</button>
+
                 </a>
                 <%--<a href="/profile">--%>
                     <%--<button type="button" class=" btn btn-outline-light disabled">Profile</button>--%>
                 <%--</a>--%>
                 <a href="/login">
-                    <button type="button" class=" btn btn-outline-light">Login</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Login</button>
                 </a>
             </div>
             <div class="mx-auto order-0">
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form class="form-inline">
-                    <input class="form-control mx-2 mt-2" type="search" placeholder="Search ads" aria-label="Search">
-                    <button class="btn btn-outline-light mt-2" type="submit">Search</button>
+
+                <form action="/ads/search" method="POST" class="form-inline my-auto">
+                    <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </c:if>

@@ -37,10 +37,10 @@
     </div>
 
     <%--SELLER AND MAP DISPLAY--%>
-    <div class="card-group">
+    <div class="card-group mt-4">
 
-        <div class="card border bg-transparent mb-2" style="border: 2px dashed #fff !important;, display: inline-block !important;">
-            <div class="card-body m-2 text-white">
+        <div class="card border bg-transparent mb-2 d-flex justify-content-center" style="border: 2px dashed #fff !important;, display: inline-block !important;">
+            <div class="card-body m-2 text-white text-center">
                 <div class="display-4 lister">Seller:</div>
                 <div><img src="${seller_image}" alt="seller profile picture"></div>
                 <div>${username}</div>

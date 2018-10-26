@@ -111,4 +111,28 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+    @Override
+    public User editUser(User user){
+
+        System.out.println("hello from the dao, " + user.getUsername() + " " + user.getEmail());
+        String query = "UPDATE users SET username = ?, last_name = ?, email = ?, street = ?, city = ?, state = ?, zip_code = ? WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getLast_name());
+            stmt.setString(3, user.getEmail());
+            stmt.setString(4, user.getStreet());
+            stmt.setString(5, user.getState());
+            stmt.setString(6, user.getCity());
+            stmt.setString(7, user.getZip_code());
+            stmt.setLong(8, user.getId());
+            stmt.executeUpdate();
+            return user;
+        } catch (SQLException e){
+            e.printStackTrace();
+            throw new RuntimeException("Error editing user information!");
+        }
+    }
+
+
 }

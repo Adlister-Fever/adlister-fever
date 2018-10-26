@@ -17,7 +17,19 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+                <select id="newAddDesc">
+                    <option value="1">Trendy</option>
+                    <option value="2">Bed</option>
+                    <option value="3">Bookcase</option>
+                    <option value="4">Chair</option>
+                    <option value="5">Storage</option>
+                    <option value="6">Lamp</option>
+                    <option value="7">Table</option>
+                    <option value="8">Electronic</option>
+                    <option value="9">Cute</option>
+                    <option value="10">Historical</option>
+                    <option value="11">Music</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="price">Sale Price</label>

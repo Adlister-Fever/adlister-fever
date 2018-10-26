@@ -9,4 +9,5 @@ public interface Users {
     Long insert(User user);
     User idFinder(Long id);
     Boolean findDuplicate(String username);
+    User editUser (User user);
 }
