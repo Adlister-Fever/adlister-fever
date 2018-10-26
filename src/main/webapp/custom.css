@@ -48,4 +48,13 @@ h1,.title{
 }
 
 
+form{
+    font-family: "Helvetica Neue";
+    !important;
+}
 
+
+.modal-backdrop {
+    background-color: rgba(0,0,0,.0001) !important;
+    /*background-image: url(AC_Dialogue_box.png) !important;*/
+}
