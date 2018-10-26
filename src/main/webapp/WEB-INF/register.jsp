@@ -33,9 +33,9 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password" required>
-                <small id="passwordHelpBlock" class="form-text text-light">
-                    Your password must include at least 2 lowercase characters, 2 uppercase characters, and 2 numbers.
-                </small>
+                <%--<small id="passwordHelpBlock" class="form-text text-light">--%>
+                    <%--Your password must include at least 2 lowercase characters, 2 uppercase characters, and 2 numbers.--%>
+                <%--</small>--%>
             </div>
             <div class="form-group">
                 <label for="confirm_password">Confirm Password</label>
