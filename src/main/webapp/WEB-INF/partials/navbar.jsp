@@ -33,7 +33,7 @@
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form action="/ads/search" method="POST" class="form-inline">
+                <form action="/ads/search" method="POST" class="form-inline my-auto">
                     <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -45,10 +45,10 @@
                     <button type="button" class=" btn btn-outline-light mr-1">Register</button>
                 </a>
                 <a href="#">
-                    <button type="button" class=" btn btn-outline-light disabled">Ads</button>
+                    <button type="button" class=" btn btn-outline-light mr-1 disabled">Ads</button>
                 </a>
                 <a href="#">
-                    <button type="button" class=" btn btn-outline-light disabled">Profile</button>
+                    <button type="button" class=" btn btn-outline-light mr-1 disabled">Profile</button>
                 </a>
                 <a href="/login">
                     <button type="button" class=" btn btn-outline-light mr-1">Login</button>
@@ -58,7 +58,7 @@
                 <a href="/index"><img src="../../Adlister-Logo-Transparent.png" id="logo"></a>
             </div>
             <div class="navbar-nav ml-auto">
-                <form action="/ads/search" method="POST" class="form-inline">
+                <form action="/ads/search" method="POST" class="form-inline my-auto">
                     <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search ads" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
