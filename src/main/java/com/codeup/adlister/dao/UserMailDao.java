@@ -10,11 +10,12 @@ public class UserMailDao implements UserMail {
     private Connection connection;
 
     public long send(Message message){
-        String insertQuery = "INSERT INTO messages(text, user_id) VALUES (?)";
+        String insertQuery = "INSERT INTO messages(title, text, user_id) VALUES (?, ?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-                    stmt.setString(1, message.getText()),
-                    stmt.setLong(2, message.getUser_id();
+                    stmt.setString(1, message.getTitle());
+                    stmt.setString(2, message.getText());
+                    stmt.setLong(3, message.getUser_id());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
