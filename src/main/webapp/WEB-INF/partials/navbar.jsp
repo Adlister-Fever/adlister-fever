@@ -17,16 +17,16 @@
         <c:if test="${user != null}">
             <div class="navbar-nav mr-auto">
                 <a href="/ads/create">
-                    <button type="button" class=" btn btn-outline-light">Create</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Create</button>
                 </a>
                 <a href="/ads/index">
-                    <button type="button" class=" btn btn-outline-light">Ads</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Ads</button>
                 </a>
                 <a href="/profile">
-                    <button type="button" class=" btn btn-outline-light">Profile</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Profile</button>
                 </a>
                 <a href="/logout">
-                    <button type="button" class=" btn btn-outline-light">Logout</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Logout</button>
                 </a>
             </div>
             <div class="mx-auto order-0">
@@ -42,7 +42,7 @@
         <c:if test="${user == null}">
             <div class="navbar-nav mr-auto">
                 <a href="/register">
-                    <button type="button" class=" btn btn-outline-light">Register</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Register</button>
                 </a>
                 <a href="#">
                     <button type="button" class=" btn btn-outline-light disabled">Ads</button>
@@ -51,7 +51,7 @@
                     <button type="button" class=" btn btn-outline-light disabled">Profile</button>
                 </a>
                 <a href="/login">
-                    <button type="button" class=" btn btn-outline-light">Login</button>
+                    <button type="button" class=" btn btn-outline-light mr-1">Login</button>
                 </a>
             </div>
             <div class="mx-auto order-0">
