@@ -25,14 +25,14 @@
         <div class="display-2">${title}</div>
         <br>
         <%--<p>AD ID: ${param.id}</p>--%>
-        <div>${image}</div>
+        <div>${description}</div>
         <br>
         <div class="display-4">
             $${price}
         </div>
         <br>
         <div class="display-4">
-            Furniture Type: ${description}
+            Furniture Type: ${image}
         </div>
     </div>
 
@@ -77,6 +77,7 @@
                 <form method="post" action="/ads/view">
                     <%--//i want to send this message to the seller's profile inbox--%>
                     <div class="form-group col-md-12">
+                        <input type="hidden" name="id" value="${param.id}">
                         <label for="subject">Subject</label>
                         <input type="text" name="subject" class="form-control" id="subject" placeholder="Hello!">
                     </div>

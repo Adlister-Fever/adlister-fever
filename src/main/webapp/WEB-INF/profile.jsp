@@ -30,7 +30,10 @@
     </div>
 </div>
 <!-- Large modal -->
-<h1> THIS IS YOUR MESSAGE: ${message}</h1>
+
+<%--NEED TO PUT MESSAGE TEXT HERE--%>
+<h1> You received a message about one of your items!</h1>
+<p></p>
 
 
 

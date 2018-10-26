@@ -71,6 +71,17 @@
                 $("#passwordConfirmValid").css("display", "inline-block")
             }
         }
+
+        // PASSWORD STRENGTH RESTRICTIONS
+        $("#password").keyup(function(){
+            var testArray = [];
+            testArray.push($("#password").innerText);
+            var passwordArray = [];
+            for(var i = 0; i<testArray.length; i++){
+                testArray[i]
+            }
+
+        })
     });
 
 

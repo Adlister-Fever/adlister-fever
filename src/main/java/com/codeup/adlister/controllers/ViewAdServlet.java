@@ -44,7 +44,7 @@ public class ViewAdServlet extends HttpServlet {
     //in theory, this will send the info to the profile BUT IT TOTALLY DOESNT
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Message message = new Message();
-                message.setId(Long.parseLong(request.getParameter("user_id")));
+                message.setId(Long.parseLong(request.getParameter("id")));
                 message.setTitle(request.getParameter("subject"));
                 message.setText(request.getParameter("message"));
         DaoFactory.getUserMailDao().send(message);
