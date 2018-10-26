@@ -1,9 +1,13 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.models.Message;
+
+import java.util.List;
+
 public interface UserMail {
     // send message to database by recipient ID
-    Long send(UserMail mail);
+    long send(Message message);
 
-    String userAll(long id);
+    List<Message> userAll(long id);
     //find messages to user by their ID
 }

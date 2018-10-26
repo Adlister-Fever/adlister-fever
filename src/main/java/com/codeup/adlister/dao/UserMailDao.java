@@ -9,8 +9,7 @@ import java.util.List;
 public class UserMailDao implements UserMail {
     private Connection connection;
 
-    @Override
-    public List<Message> send(Message message){
+    public long send(Message message){
         String insertQuery = "INSERT INTO messages(text, user_id) VALUES (?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
