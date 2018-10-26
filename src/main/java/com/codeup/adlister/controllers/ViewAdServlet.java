@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Message;
 import com.codeup.adlister.models.User;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,16 +43,20 @@ public class ViewAdServlet extends HttpServlet {
 
     //in theory, this will send the info to the profile BUT IT TOTALLY DOESNT
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String subject = request.getParameter("subject");
-        String message = request.getParameter("message");
-        try {
-            request.getSession().setAttribute("subject", subject);
-            request.getSession().setAttribute("message", message);
-            request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+        Message message = new Message();
+                message.setId(Long.parseLong(request.getParameter("user_id")));
+                message.setTitle(request.getParameter("subject"));
+                message.setText(request.getParameter("message"));
+        DaoFactory.getUserMailDao().send(message);
 
-        } catch (ServletException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            request.getSession().setAttribute("subject", subject);
+//            request.getSession().setAttribute("message", message);
+//            request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+//
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        }
 
 //        response.sendRedirect("/profile");
     }

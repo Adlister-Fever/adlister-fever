@@ -23,6 +23,10 @@ public class Message {
         this.title = title;
     }
 
+    public Message() {
+
+    }
+
     public long getId() {
         return id;
     }
