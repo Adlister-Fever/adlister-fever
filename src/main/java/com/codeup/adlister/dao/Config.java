@@ -13,7 +13,7 @@ public class Config {
     public String getUser() {
 
 
-        return "steph";
+        return "adlister_admin";
 
     }
 
@@ -22,7 +22,7 @@ public class Config {
 
 
 
-        return "codeup";
+        return "sqlpass";
 
     }
 
