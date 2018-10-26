@@ -30,7 +30,7 @@
     </div>
 </div>
 <!-- Large modal -->
-<h1> THIS IS YOUR MESSAGE: ${message}</h1>
+<h1 class="ml-2"> THIS IS YOUR MESSAGE: ${message}</h1>
 
 
 
@@ -40,9 +40,10 @@
         <c:forEach var="ad" items="${userads}">
             <div class="adBox card float-left text-center d-flex justify-content-center">
                 <h2><a href="/ads/view?id=${ad.id}&title=${ad.title}"><c:out value="${ad.title}"/></a></h2>
-                <p>Price:$ <c:out value="${ad.value}"/></p>
-                <p>Furniture Type: <c:out value="${ad.image}"/></p>
-                <p>${ad.description}</p>
+                <div>Price:$ <c:out value="${ad.value}"/></div>
+                <div>Furniture Type: <c:out value="${ad.image}"/></div>
+                <div>${ad.description}</div>
+
             </div>
         </c:forEach>
     </div>
