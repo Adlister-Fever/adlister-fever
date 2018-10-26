@@ -45,11 +45,11 @@
                     <button type="button" class=" btn btn-outline-light">Register</button>
                 </a>
                 <a href="/ads/index">
-                    <button type="button" class=" btn btn-outline-light disabled">Ads</button>
+                    <button type="button" class=" btn btn-outline-light">Ads</button>
                 </a>
-                <a href="/profile">
-                    <button type="button" class=" btn btn-outline-light disabled">Profile</button>
-                </a>
+                <%--<a href="/profile">--%>
+                    <%--<button type="button" class=" btn btn-outline-light disabled">Profile</button>--%>
+                <%--</a>--%>
                 <a href="/login">
                     <button type="button" class=" btn btn-outline-light">Login</button>
                 </a>
@@ -59,8 +59,8 @@
             </div>
             <div class="navbar-nav ml-auto">
                 <form class="form-inline">
-                    <input class="form-control mx-2" type="search" placeholder="Search ads" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mx-2 mt-2" type="search" placeholder="Search ads" aria-label="Search">
+                    <button class="btn btn-outline-light mt-2" type="submit">Search</button>
                 </form>
             </div>
         </c:if>
